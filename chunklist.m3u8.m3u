@@ -8,7 +8,7 @@ https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxI
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724066120/images_1_flkcx0.png" group-title="JagoBD",Zee Bangla
 http://bdix.livecast.rf.gd/ZeeBangla/index.m3u8 
 
-#EXTINF:-1 tvg-id="zns9eha2" tvg-name="Discovery" tvg-logo="https://static.wixstatic.com/media/de9395_c6f683c169ff4435b8eb856642e286a3.png/v1/fill/w_250,h_177,al_c,q_95,enc_auto/de9395_c6f683c169ff4435b8eb856642e28" tvg-chno="28" group-title="MSm",Discovery
+#EXTINF:-1 tvg-logo="https://static.wixstatic.com/media/de9395_c6f683c169ff4435b8eb856642e286a3.png/v1/fill/w_250,h_177,al_c,q_95,enc_auto/de9395_c6f683c169ff4435b8eb856642e28" group-title="MSm",Discovery
 https://raw.githubusercontent.com/subirkumarpaul/My-iptv/main/Discovery.m3u8
 
 #EXTINF:-1 tvg-id="zns9eha2" tvg-name="Ananda TV" tvg-logo="https://i.postimg.cc/DZTg115q/Ananda-TV.png" tvg-chno="28" group-title="Nayeem's BDCast",Ananda TV 
