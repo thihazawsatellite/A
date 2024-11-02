@@ -8,6 +8,9 @@ https://hotflixbd.online/hotflix/gtv/index.m3u8
 #EXTINF:-1 tvg-logo="http://www.jagobd.com/wp-content/uploads/2015/12/atn-bangla1.jpg?x91288" group-title="JagoBD",ATN Bangla 
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbd-8-org.stream/playlist.m3u8 
 
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730576783/20241103_014604_i0z46a.png" group-title="JagoBD",আকাশ ৮
+http://watchindia.net:8880/live/80817/80817/2295.m3u8
+
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729560981/20241022_073518_ti6bij.png" group-title="JagoBD",Sun Bangla
 http://watchindia.net:8880/live/80817/80817/2290.m3u8
 
