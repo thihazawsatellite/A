@@ -17,6 +17,9 @@ http://watchindia.net:8880/live/80817/80817/2290.m3u8
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724066120/images_1_flkcx0.png" group-title="JagoBD",Zee Bangla HD
 http://103.205.133.71/ZeeBangla/index.m3u8 
 
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724065895/images_9_z92uwd.jpg" group-title="JagoBD",Colors Bangla
+http://watchindia.net:8880/live/80817/80817/2284.m3u8
+
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724167312/images_15_aelux6.jpg" group-title="JagoBD",Star Jalsha HD
 http://bdix.livecast.rf.gd/StarJalshaFHD/index.m3u8
 
