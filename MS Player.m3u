@@ -2,6 +2,9 @@
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729126985/20241017_070240_hgukaf.png" group-title="JagoBD",Probashi Bangla 
 https://mhdtvplay.com/miniProxy.php/http://probashi.alvegroups.com:8081/probashitv/probashi/playlist.m3u8 
 
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729560981/20241022_073518_ti6bij.png" group-title="JagoBD",Sun Bangla
+http://watchindia.net:8880/live/80817/80817/2290.m3u8
+
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729409710/20241020_133454_iqepp7.png" group-title="JagoBD",GTV 
 https://hotflixbd.online/hotflix/gtv/index.m3u8
 
