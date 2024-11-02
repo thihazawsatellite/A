@@ -191,7 +191,7 @@ http://probashi.alvegroups.com:8081/probashitv/probashi/playlist.m3u8
 http://starshare.live:8080/live/Leroy123/Leroy123/4231.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/d/d7/Duronto_TV_Logo.png" group-title="BANGLADESH", Duronto TV 
-https://mhdtvplay.com/miniProxy.php/http://103.145.48.150:90/laosat24/taratv/index.m3u8
+http://watchindia.net:8880/live/80817/80817/2284.m3u8
 
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Sony_Aath_new.png/300px-Sony_Aath_new.png", Sony Aath 
 http://bd.ottbd.online:2082/live/Durjoy859/01327184859/2181.m3u8 
