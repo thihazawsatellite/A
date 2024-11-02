@@ -1,5 +1,5 @@
 #EXTM3U 
-#EXTINF:-1 tvg-logo="https://play-lh.googleusercontent.com/zooER-oa-NqGzAR4HjEUGYBOfAcWvyoWGGIjZn3peR6xveFznWN6LvXCP_5A5zoB7gdE" group-title="JagoBD",Joo Music 
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729126985/20241017_070240_hgukaf.png" group-title="JagoBD",Probashi Bangla 
 https://mhdtvplay.com/miniProxy.php/http://probashi.alvegroups.com:8081/probashitv/probashi/playlist.m3u8 
 
 #EXTINF:0 tvg-logo="http://www.jagobd.com/wp-content/uploads/2015/12/atn-bangla1.jpg?x91288" group-title="JagoBD",ATN Bangla 
