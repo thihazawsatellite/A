@@ -241,13 +241,13 @@ http://103.145.48.150:90/laosat24/taratv/index.m3u8
 #EXTINF:-1 group-title="Grope Name" tvg-logo="https://files.catbox.moe/xbfe0e.png",Tara Bangla 
 https://server.playontv.in/TARAMUSIC/index.m3u8
 
-#EXTINF:-1 group-title="MOVIES CHANNELS" tvg-logo="https://i.ibb.co/KjjqnRH/Picsart-23-06-30-21-35-20-283.png",SHEEMAROO BOLLYWOOD
+#EXTINF:-1 group-title="Hindi Movie" tvg-logo="https://daex9l847wg3n.cloudfront.net/shemoutputimages/Shemaroo-Bollywood/630e1f94dde715ef7c000076/medium_16_9_webp_1661880865.webp?1661890514",SHEEMAROO BOLLYWOOD
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8 
 
-#EXTINF:-1 group-title="MOVIES CHANNELS" tvg-logo="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sMeIy99DuD7eZjRvuxJ7OhrazjxRnLxrfCSuzDmi-Ymr7UwXA4tB7qTP7X0znb5g0SE5okD1MUvCBRax3V2RXYprIXKY0BPWFYc_BqVCqGCPCLak5z3yGZ2xtNjJw-dkSNHxQgXaZRruIf0pWXRGy13dyMviNgy6id-X_qpXfV2c3hXMyChAt0nJLUko70Kwu9Oc5YQmSZIVybIBPsfU88CUCayjY1_Xs=w1200-h800-p-k-no-nu",CLASSIC BOLLYWOOD
+#EXTINF:-1 group-title="Hindi Movie" tvg-logo="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sMeIy99DuD7eZjRvuxJ7OhrazjxRnLxrfCSuzDmi-Ymr7UwXA4tB7qTP7X0znb5g0SE5okD1MUvCBRax3V2RXYprIXKY0BPWFYc_BqVCqGCPCLak5z3yGZ2xtNjJw-dkSNHxQgXaZRruIf0pWXRGy13dyMviNgy6id-X_qpXfV2c3hXMyChAt0nJLUko70Kwu9Oc5YQmSZIVybIBPsfU88CUCayjY1_Xs=w1200-h800-p-k-no-nu",CLASSIC BOLLYWOOD
 https://d35j504z0x2vu2.cloudfront.net:443/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-classic/manifest.m3u8
 
-#EXTINF:-1 group-title="MOVIES CHANNELS" tvg-logo="https://i.ibb.co/YNGyQJR/Picsart-23-06-25-22-19-02-657.png",BOLLYWOOD HD
+#EXTINF:-1 group-title="Hindi Movie" tvg-logo="https://vits.tv/wp-content/uploads/2023/03/bollywood-hd-150x150.jpg",BOLLYWOOD HD
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-hd/manifest.m3u8
 
 #EXTINF:-1 group-title="Hindi MOVIES" tvg-logo="https://pbs.twimg.com/media/FOHfYsbWYAcPKFL.jpg",The Movie Club
