@@ -250,11 +250,17 @@ https://d35j504z0x2vu2.cloudfront.net:443/v1/master/0bc8e8376bd8417a1b6761138aa4
 #EXTINF:-1 group-title="Hindi Movie" tvg-logo="https://vits.tv/wp-content/uploads/2023/03/bollywood-hd-150x150.jpg",BOLLYWOOD HD
 https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-hd/manifest.m3u8
 
+#EXTINF:-1 group-title="Hindi MOVIES" tvg-logo="https://yt3.googleusercontent.com/5NzSGxUReZgIWLeKGlDdt71JFQ2abRXgoYoquEKtgDQ7x5CDwUIeEPhEs0XgoGtZAmzvOFiv-h8=s900-c-k-c0x00ffffff-no-rj",Bollywood Prime
+https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/bollywood-prime/3850b620-3d48-4f69-a540-27e9f3262077/3.m3u8
+
 #EXTINF:-1 group-title="Hindi MOVIES" tvg-logo="https://pbs.twimg.com/media/FOHfYsbWYAcPKFL.jpg",The Movie Club
 https://cc-jytb1qhmgqh5a.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-jytb1qhmgqh5a/playlist.m3u8
 
 #EXTINF:-1 group-title="Hindi MOVIES" tvg-logo="https://images.samsung.com/is/image/samsung/assets/in/tvs/smart-tv/samsung-tv-plus/all-channels/19550_Logo_196x164-px_South-station.jpg",South Station
 https://cc-tke03xaj1wszc.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-tke03xaj1wszc/South_Station_IN/playlist.m3u8
+
+#EXTINF:-1 group-title="Hindi MOVIES" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730171631/20241029_091055_rgvry6.png",RDC Movie
+https://janya-rdcmovies.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/230a723f-867d-4fa3-b2d2-a622ba994cd2/main.m3u8
 
 #EXTINF:-1 group-title="𝗞𝗶𝗱𝘀" tvg-logo="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tQaOAwqEtejKUmxTeyNwLnzXcz7URGADdxiLBCKorRSnjgNEdZG6NKoQgLyGKyu0f-L0oA7m-WBY9azuEDIGBFCRjtlTPgKHxZkdFxNmgs3_mBJnjkLHatoNsQkMCqHOKZPPNJ8HbLcwcG9tmXoIa0RCmOsw7s4p2HTQBvtQNeVkwrhZbrD8a5rLa93AzZaKPXDIS7G_Tnwy9SFh-mD9zwTlsxGYmguTK4oVnfGC0PgGagR45q=w1200-h800-p-k-no-nu",𝘿𝙞𝙨𝙘𝙤𝙫𝙚𝙧𝙮 𝙆𝙞𝙙𝙨
 https://dplus.gammacdn.workers.dev/videos/113.m3u8
