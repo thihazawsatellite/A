@@ -1,4 +1,7 @@
 #EXTM3U 
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729129553/20241017_074533_nohsmd.png"group-title="LPL",T Sports 
+http://bdix.livecast.rf.gd/LiveEvent1/index.m3u8
+
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730576783/20241103_014604_i0z46a.png" group-title="Kolkata",আকাশ ৮
 http://watchindia.net:8880/live/80817/80817/2295.m3u8
 
@@ -202,9 +205,6 @@ http://bd.ottbd.online:2082/live/Durjoy859/01327184859/2181.m3u8
 
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0o0veJjt_XWCjWTMSN7gP6XC2qqsHMp9PR9bwbk0UWXlCcKITRdF4zyQ&s=10", Jalsha Moviees HD 
 http://tv.cloudcdn.me/live/00:1A:79:A4:26:62/4280/117.m3u8 
-
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/en/1/11/T_Sports_logo.png"group-title="LPL",T Sports 
-http://bdix.livecast.rf.gd/LiveEvent1/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.ibb.co.com/8jHFz4k/download.png" group-title="Cricket 🏏", RTA Sports HD 🔗🏏 
 https://rtatv.akamaized.net/Content/HLS/Live/channel(RTA3)/variant.m3u8
