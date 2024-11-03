@@ -8,19 +8,22 @@ https://hotflixbd.online/hotflix/gtv/index.m3u8
 #EXTINF:-1 tvg-logo="http://www.jagobd.com/wp-content/uploads/2015/12/atn-bangla1.jpg?x91288" group-title="JagoBD",ATN Bangla 
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbd-8-org.stream/playlist.m3u8 
 
-#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730576783/20241103_014604_i0z46a.png" group-title="JagoBD",আকাশ ৮
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730576783/20241103_014604_i0z46a.png" group-title="Kolkata",আকাশ ৮
 http://watchindia.net:8880/live/80817/80817/2295.m3u8
 
-#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729560981/20241022_073518_ti6bij.png" group-title="JagoBD",Sun Bangla
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729560981/20241022_073518_ti6bij.png" group-title="Kolkata",Sun Bangla
 http://watchindia.net:8880/live/80817/80817/2290.m3u8
 
-#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724066120/images_1_flkcx0.png" group-title="JagoBD",Zee Bangla HD
+#EXTINF:-1 group-title="KOLKATA" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729904896/20241026_070745_cblbez.png",ENTEER TEN BANGLA
+https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8
+
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724066120/images_1_flkcx0.png" group-title="Kolkata",Zee Bangla HD
 http://103.205.133.71/ZeeBangla/index.m3u8 
 
-#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724065895/images_9_z92uwd.jpg" group-title="JagoBD",Colors Bangla
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724065895/images_9_z92uwd.jpg" group-title="Kolkata",Colors Bangla
 http://watchindia.net:8880/live/80817/80817/2284.m3u8
 
-#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724167312/images_15_aelux6.jpg" group-title="JagoBD",Star Jalsha HD
+#EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724167312/images_15_aelux6.jpg" group-title="Kolkata",Star Jalsha HD
 http://bdix.livecast.rf.gd/StarJalshaFHD/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.ytimg.com/vi/4arhC0ITsTE/sddefault.jpg" group-title="JagoBD",Discovery
@@ -231,11 +234,7 @@ https://live-stream.utkalbongo.com/utkalbongo/stream10/hls/amarbangla.m3u8
 https://live-stream.utkalbongo.com/utkalbongo/stream2/hls/amarbanglatwolivestream.m3u8 
 
 #EXTINF:-1 group-title="BANGLADESH" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQrOMsdkfX7iirtL5LHIosFTqpB8hhdpS7zg&usqp=CAU",SANANDA 
-http://54.38.79.60:2020/sananda/index.m3u8 
-
-
-#EXTINF:-1 group-title="KOLKATA" tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-48494-k3zd1a80-v1/imageContent-48494-k3zd1a80-m4.png",ENTEER TEN BANGLA
-https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8
+http://54.38.79.60:2020/sananda/index.m3u8
 
 #EXTINF:-1 group-title="KOLKATA" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiXdL02riynqBhf3EFtQvS647yv0vxSdeVz55Z1_0pG_VEqhFOmutxbqxz&s=10",RUPOSHI BANGLA
 https://cdn3.pishow.tv/live/281/master.m3u8
