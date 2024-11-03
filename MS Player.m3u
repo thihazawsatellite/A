@@ -215,10 +215,6 @@ https://rtatv.akamaized.net/Content/HLS/Live/channel(RTA3)/variant.m3u8
 #EXTINF:-1 tvg-logo="https://i.ibb.co/7VZqMNk/download-4.png" group-title="Football", VTC 1 HD 🏆
 https://liveh12.vtvcab.vn/hls/ONVTC1_CL/index.m3u8
 
-#EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/B4U_Kadak.png" group-title="India",B4U KADAK
-https://cdn2.pishow.tv/live/160/160_1.m3u8
-
-
 
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sangeet_Bangla.png",SANGEET BANGLA 
 https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Sangeetbangla/default/index.m3u8 
@@ -241,6 +237,8 @@ http://103.145.48.150:90/laosat24/taratv/index.m3u8
 #EXTINF:-1 group-title="Grope Name" tvg-logo="https://files.catbox.moe/xbfe0e.png",Tara Bangla 
 https://server.playontv.in/TARAMUSIC/index.m3u8
 
+group-title="Movies"
+
 #EXTINF:-1 group-title="Hindi Movie" tvg-logo="https://daex9l847wg3n.cloudfront.net/shemoutputimages/Shemaroo-Bollywood/630e1f94dde715ef7c000076/medium_16_9_webp_1661880865.webp?1661890514",SHEEMAROO BOLLYWOOD
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg00864-shemarooenterta-shemabollywood-ono/playlist.m3u8 
 
@@ -261,6 +259,9 @@ https://cc-tke03xaj1wszc.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da6
 
 #EXTINF:-1 group-title="Hindi MOVIES" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730171631/20241029_091055_rgvry6.png",RDC Movie
 https://janya-rdcmovies.akamaized.net/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/230a723f-867d-4fa3-b2d2-a622ba994cd2/main.m3u8
+
+#EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/B4U_Kadak.png" group-title="India Movie",B4U KADAK
+https://cdn2.pishow.tv/live/160/160_1.m3u8
 
 #EXTINF:-1 group-title="𝗞𝗶𝗱𝘀" tvg-logo="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tQaOAwqEtejKUmxTeyNwLnzXcz7URGADdxiLBCKorRSnjgNEdZG6NKoQgLyGKyu0f-L0oA7m-WBY9azuEDIGBFCRjtlTPgKHxZkdFxNmgs3_mBJnjkLHatoNsQkMCqHOKZPPNJ8HbLcwcG9tmXoIa0RCmOsw7s4p2HTQBvtQNeVkwrhZbrD8a5rLa93AzZaKPXDIS7G_Tnwy9SFh-mD9zwTlsxGYmguTK4oVnfGC0PgGagR45q=w1200-h800-p-k-no-nu",𝘿𝙞𝙨𝙘𝙤𝙫𝙚𝙧𝙮 𝙆𝙞𝙙𝙨
 https://dplus.gammacdn.workers.dev/videos/113.m3u8
