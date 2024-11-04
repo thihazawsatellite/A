@@ -40,7 +40,7 @@
 
 <div class="channel" onclick="play('https://edge01.iptv.digijadoo.net/live/boishakhi_tv/playlist.m3u8?md5=KF8xeDtP_OYBn8o2ij9RLw&expires=1730058751&user=d477246e9e724f81a011b847457e71c4')"> <img alt="Stream" src="https://i.postimg.cc/mZvSC0DF/image.png"/><p>Boishakhi Tv</p></div>
 
-<div class="channel" onclick="play('https://edge01.iptv.digijadoo.net/live/atn_news/playlist.m3u8?md5=QfK7dq-aLNuPGucRLBXUJw&expires=1730058736&user=d477246e9e724f81a011b847457e71c4')"> <img alt="Stream" src="https://i.postimg.cc/5NznrfG3/image.png"/><p>ATN News</p></div>
+<div class="channel" onclick="play('https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbd-8-org.stream/playlist.m3u8f81a011b847457e71c4')"> <img alt="Stream" src="https://i.postimg.cc/5NznrfG3/image.png"/><p>ATN News</p></div>
 
 <div class="channel" onclick="play('https://edge01.iptv.digijadoo.net/live/channel_24/playlist.m3u8?md5=DA2WBR8RVgz8pwkS5cHqtw&expires=1730058756&user=d477246e9e724f81a011b847457e71c4')"> <img alt="Stream" src="https://i.postimg.cc/d3VcBLn4/Channel24logo-svg.png"/><p>Channel 24</p></div>
 
@@ -59,6 +59,8 @@
 <div class="channel_collapse">
 
 <div class="channel" onclick="play('https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8')"> <img alt="Stream" src="https://i.postimg.cc/FH0tsBmm/image.jpg"/><p>Enterr10 Bangla</p></div>
+<div class="channel" onclick="play('https://mhdtvplay.com/miniProxy.php/http://bdix.livecast.rf.gd/ZeeBangla/index.m3u8')"> <img alt="Stream" src="https://res.cloudinary.com/dfa00wslf/image/upload/v1724066120/images_1_flkcx0.png"/><p>Zee Bangla</p></div>
+
 <div class="channel" onclick="play('https://isp.sananda.online/Ptv/index.m3u8')"> <img alt="Asports" src=""/><p>Ptv</p></div>		
 
 
