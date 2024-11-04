@@ -293,6 +293,15 @@ https://live-stream.utkalbongo.com/utkalbongo/stream10/hls/amarbangla.m3u8
 #EXTINF:-1 group-title="KOLKATA" tvg-logo="https://files.catbox.moe/jzhv1f.png",Amar Digital 
 https://live-stream.utkalbongo.com/utkalbongo/stream2/hls/amarbanglatwolivestream.m3u8 
 
+#EXTINF:-1 group-title="Kolkata" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729346030/20241019_195259_l6loxy.png",Mon Bangla TV
+https://live-stream.utkalbongo.com/utkalbongo/stream7/hls/montvlivestream.m3u8
+
+#EXTINF:-1 group-title="JagoBD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1728210899/khusbu-bangla-_mccnlj.webp",Khushbo Bangla
+https://cdn3.pishow.tv/live/283/master.m3u8
+
+#EXTINF:-1 group-title="JagoBD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1728214532/images_17_ioxxtj.jpg",Bangla+
+https://live-stream.utkalbongo.com/hls/livebanglatvstream.m3u8
+
 #EXTINF:-1 group-title="BANGLADESH" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQrOMsdkfX7iirtL5LHIosFTqpB8hhdpS7zg&usqp=CAU",SANANDA 
 http://54.38.79.60:2020/sananda/index.m3u8
 
