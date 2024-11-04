@@ -314,6 +314,35 @@ http://103.145.48.150:90/laosat24/taratv/index.m3u8
 #EXTINF:-1 group-title="Grope Name" tvg-logo="https://files.catbox.moe/xbfe0e.png",Tara Bangla 
 https://server.playontv.in/TARAMUSIC/index.m3u8
 
+group-title="DD Channel"
+
+#EXTINF:-1 group-title="DD" tvg-logo="https://static.wikia.nocookie.net/logosfake/images/7/76/DD_National.png",DD National
+https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Ddnational/default/index.m3u8
+
+#EXTINF:-1 group-title="DD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/shows/700/-/2024-09-22/240922580024.jpg",DD Bharoti
+https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Ddbharti/default/index.m3u8
+
+#EXTINF:-1 group-title="DD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729698154/20241023_214217_pz6hnc.png",DD Madhyapradesh
+https://cdn3.pishow.tv/live/212/master.m3u8
+
+#EXTINF:-1 group-title="DD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729696798/20241023_211942_ehl9pr.png",DD Punjabi
+https://cdn3.pishow.tv/live/183/master.m3u8
+
+#EXTINF:-1 group-title="DD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729697874/20241023_213737_fzz7mx.png",DD Nodia
+https://cdn3.pishow.tv/live/210/master.m3u8
+
+#EXTINF:-1 group-title="DD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729698753/20241023_215219_rjnala.png",DD Arunachal
+https://cdn3.pishow.tv/live/221/master.m3u8
+
+#EXTINF:-1 group-title="DD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729698941/20241023_215524_vrxmju.png",DD Meghalaya
+https://cdn3.pishow.tv/live/223/master.m3u8
+
+#EXTINF:-1 group-title="DD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729699424/DDCG_Thumbnail_ijgkx7.png",DD Chhattisgarh
+https://cdn3.pishow.tv/live/226/master.m3u8
+
+#EXTINF:-1 group-title="DD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729699665/20241023_220721_az3f3o.png",DD Bihar
+https://cdn3.pishow.tv/live/229/master.m3u8
+
 group-title="Hindi Channel"
 
 #EXTINF:-1 group-title="Hindi Movie" tvg-logo="https://daex9l847wg3n.cloudfront.net/shemoutputimages/Shemaroo-Bollywood/630e1f94dde715ef7c000076/medium_16_9_webp_1661880865.webp?1661890514",SHEEMAROO BOLLYWOOD
