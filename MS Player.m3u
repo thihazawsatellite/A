@@ -209,6 +209,33 @@ http://tv.cloudcdn.me/live/00:1A:79:A4:26:62/4280/185.m3u8
 #EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730685952/mobile_logo_440775001666782769_ww2tgy.png",Sony Max HD
 https://toffee.iptvbd.xyz/api/set_max_hd.m3u8
 
+#EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730380574/20241031_191544_uhrybg.png",Sony Max 2
+https://toffee.iptvbd.xyz/api/sony_msx_2.m3u8
+
+#EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730688196/mobile_logo_149299001666780350_fi2bak.png",Sony Entertainment
+https://toffee.iptvbd.xyz/api/sony_entertainment.m3u8
+
+#EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729008739/20241015_221038_qplndv.png",Sony Entertainment HD
+https://toffee.iptvbd.xyz/api/sony_entertainmnt_hd.m3u8
+
+#EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730687258/mobile_logo_037670001666785867_jollja.png",Sony Wah
+https://toffee.iptvbd.xyz/api/sony_wah.m3u8
+
+#EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729009091/20241015_221751_bqvzri.png",Sony Kal
+https://spt-sonykal-1-us.lg.wurl.tv/playlist.m3u8
+
+#EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730686781/mobile_logo_688156001666785674_ojlbaf.png",Sony Sab HD
+https://toffee.iptvbd.xyz/api/sony_sab_hd.m3u8 
+
+#EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730687554/mobile_logo_091186001666784752_blozpo.png",Sony Yay
+https://toffee.iptvbd.xyz/api/sony_yay.m3u8
+
+#EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730687749/mobile_logo_287412001666784602_disg8m.png",Sony Pix HD
+http://watchindia.net:8880/live/80817/80817/2101.m3u8
+
+#EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730687941/mobile_logo_363688001655891620_bomypm.png",Sony Bbc Earth HD
+https://toffee.iptvbd.xyz/api/sony_bbc_earth_hd.m3u8
+
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0o0veJjt_XWCjWTMSN7gP6XC2qqsHMp9PR9bwbk0UWXlCcKITRdF4zyQ&s=10", Jalsha Moviees HD 
 http://tv.cloudcdn.me/live/00:1A:79:A4:26:62/4280/117.m3u8 
 
