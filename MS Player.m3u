@@ -6,7 +6,7 @@ http://fcdn.bdixsports.live:1935/event/event.stream/playlist.m3u8
 http://watchindia.net:8880/live/80817/80817/2295.m3u8
 
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729560981/20241022_073518_ti6bij.png" group-title="Kolkata",Sun Bangla
-https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20Sun%20Bangla%20HD.m3u8
+https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20Akash8.m3u8
 
 #EXTINF:-1 group-title="KOLKATA" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729904896/20241026_070745_cblbez.png",ENTEER TEN BANGLA
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8
