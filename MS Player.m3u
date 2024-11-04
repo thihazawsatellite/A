@@ -56,11 +56,17 @@ https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxI
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729409710/20241020_133454_iqepp7.png" group-title="JagoBD",GTV 
 https://hotflixbd.online/hotflix/gtv/index.m3u8
 
+#EXTINF:-1 group-title="JagoBD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729409234/20241020_132656_sbvt5f.png",Asian TV
+https://mtlivestream.com/asian/ytlive/index.m3u8
+
+#EXTINF:-1 tvg-id="zns9eha2" tvg-name="Ananda TV" tvg-logo="https://i.postimg.cc/DZTg115q/Ananda-TV.png" tvg-chno="28" group-title="Nayeem's BDCast",Ananda TV 
+https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/playlist.m3u8
+
 #EXTINF:-1 tvg-logo="http://www.jagobd.com/wp-content/uploads/2015/12/atn-bangla1.jpg?x91288" group-title="JagoBD",ATN Bangla 
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbd-8-org.stream/playlist.m3u8
 
-#EXTINF:-1 tvg-id="zns9eha2" tvg-name="Ananda TV" tvg-logo="https://i.postimg.cc/DZTg115q/Ananda-TV.png" tvg-chno="28" group-title="Nayeem's BDCast",Ananda TV 
-https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/anandatv.stream/playlist.m3u8 
+#EXTINF:-1 group-title="JagoBD" tvg-logo="https://play-lh.googleusercontent.com/5kkuqfLE8ukxWVOkObzhiVO37shyj_DnuQL4qZEAKd4qaMhBF36H4mxs4ivLtvTF7nc=w240-h480-rw",Atn Bangla UK
+https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnbanglauk-off.stream/playlist.m3u8 
 
 #EXTINF:0 tvg-logo="http://www.jagobd.com/wp-content/uploads/2016/02/atnislamictv.jpg?x91288" group-title="JagoBD",ATN Islamic 
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/atnislamictv.stream/playlist.m3u8 
@@ -106,6 +112,9 @@ https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxI
 
 #EXTINF:-1 group-title="JagoBD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729822657/20241025_081645_fhaala.png",Nobanno TV
 https://app.ncare.live/live-orgin/cmtv.stream/playlist.m3u8
+
+#EXTINF:-1 group-title="JagoBD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724065365/moviebanglatv-logo-2_v8apuj.png",Movie Bangla
+https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/moviebanglalink2.stream/playlist.m3u8
 
 #EXTINF:0 tvg-logo="http://www.jagobd.com/wp-content/uploads/2017/01/rtvbd.jpg?x91288" group-title="JagoBD",RTV 
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/rtv-sg.stream/playlist.m3u8 
@@ -205,6 +214,9 @@ https://iptvbd.live/metv1080/1080.m3u8
 
 #EXTINF:-1 group-title="BANGLADESHI" tvg-logo="https://i.imgur.com/Nbw3bKO.png",Probashi Tv
 http://probashi.alvegroups.com:8081/probashitv/probashi/playlist.m3u8
+
+#EXTINF:-1 group-title="JagoBD" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730369856/20241031_161639_qkprgs.png",Srk TV
+https://cdn.ncare.live/flixhls/flixsrktv.stream/playlist.m3u8
 
 #EXTINF:-1 group-title="BANGLADESH" tvg-logo="https://images.toffeelive.com/images/program/11841/logo/240x240/mobile_logo_456366001662385216.png",GLOBAL TV HD
 http://starshare.live:8080/live/Leroy123/Leroy123/4231.m3u8
