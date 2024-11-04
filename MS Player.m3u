@@ -207,10 +207,10 @@ https://tv.cloudcdn.online/live/00:1A:79:A4:26:62/4280/44150.m3u8
 http://tv.cloudcdn.me/live/00:1A:79:A4:26:62/4280/185.m3u8 
 
 #EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730685952/mobile_logo_440775001666782769_ww2tgy.png",Sony Max HD
-https://toffee.iptvbd.xyz/api/sony_max_2.m3u8
+https://toffee.iptvbd.xyz/api/set_max_hd.m3u8
 
 #EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730380574/20241031_191544_uhrybg.png",Sony Max 2
-https://toffee.iptvbd.xyz/api/sony_max.m3u8
+https://toffee.iptvbd.xyz/api/sony_max_2.m3u8
 
 #EXTINF:-1 group-title="Sony" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730688196/mobile_logo_149299001666780350_fi2bak.png",Sony Entertainment
 https://toffee.iptvbd.xyz/api/sony_entertainment.m3u8
