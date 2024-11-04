@@ -343,6 +343,24 @@ https://cdn2.pishow.tv/live/156/master.m3u8
 #EXTINF:-1 tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/B4U_Kadak.png" group-title="India Movie",B4U KADAK
 https://cdn2.pishow.tv/live/160/160_1.m3u8
 
+#EXTINF:-1 group-title="India" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729695863/20241023_210403_dyubee.png",Pitaara
+https://cdn3.pishow.tv/live/138/master.m3u8
+
+#EXTINF:-1 group-title="India" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1730173887/20241029_095101_wxlwln.png",Hum TV
+https://g4wlkwx8l23a-hls-live.5centscdn.com/HUM/271ddf829afeece44d8732757fba1a66.sdp/playlist_dvr.m3u8
+
+#EXTINF:-1 group-title="India" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/shows/700/-/2024-09-30/240930971022.jpg",Vaanavil TV
+https://6n3yope4d9ok-hls-live.5centscdn.com/vaanavil/TV.stream/playlist.m3u8
+
+#EXTINF:-1 group-title="India" tvg-logo="https://www.starnetwork.net.in/images/logo-1.png",Starnet
+https://5a1178b42cc03.streamlock.net/8220/8220/playlist.m3u8
+
+#EXTINF:-1 group-title="India" tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729696440/20241023_211342_ubcag7.png",Bojopuri Cinema
+https://cdn3.pishow.tv/live/165/master.m3u8
+
+#EXTINF:-1 group-title="Hollywood" tvg-logo="https://i1.wp.com/enjoytv.asia/wp-content/uploads/2019/12/Action-hollywood-movies.jpg?fit=300%2C170&ssl=1",Action Hollywood 
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
+
 #EXTINF:-1 group-title="𝗞𝗶𝗱𝘀" tvg-logo="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tQaOAwqEtejKUmxTeyNwLnzXcz7URGADdxiLBCKorRSnjgNEdZG6NKoQgLyGKyu0f-L0oA7m-WBY9azuEDIGBFCRjtlTPgKHxZkdFxNmgs3_mBJnjkLHatoNsQkMCqHOKZPPNJ8HbLcwcG9tmXoIa0RCmOsw7s4p2HTQBvtQNeVkwrhZbrD8a5rLa93AzZaKPXDIS7G_Tnwy9SFh-mD9zwTlsxGYmguTK4oVnfGC0PgGagR45q=w1200-h800-p-k-no-nu",𝘿𝙞𝙨𝙘𝙤𝙫𝙚𝙧𝙮 𝙆𝙞𝙙𝙨
 https://dplus.gammacdn.workers.dev/videos/113.m3u8
 
