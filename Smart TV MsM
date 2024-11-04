@@ -1,0 +1,421 @@
+<html>
+  
+  <head>
+ 
+       <title>Protasha Live Tv</title>
+    
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+   
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+   <link rel="stylesheet" href="playerjs.css">
+	
+<script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js" type="text/javascript"></script>	
+
+    </head>
+<body>
+   
+ <!--nav><center><img src="" height="50px" width="256px"></center></nav-->
+    
+  <main>
+    
+    <div id="channels">
+
+
+
+
+	
+ <h2 class="category">Global</h2>
+<div class="channel_collapse">
+
+<div class="channel" onclick="play('https://mtlivestream.com/asian/ytlive/index.m3u8')"> <img alt="Stream" src="https://i.postimg.cc/3wcqTkxy/image.png"/><p>asian TV</p></div>
+
+<div class="channel" onclick="play('https://channel-i-tv.rockstreamer.com/chlive/121212/chunks.m3u8')"> <img alt="Stream" src="https://i.postimg.cc/PqTXwFWb/Pixahunt-68db32d506bb59547923d52242f8bacf.jpg"/><p>Channel-I</p></div>
+
+<div class="channel" onclick="play('https://mtv.sunplex.live/MAASRANGA-TV/tracks-v1a1/mono.m3u8')"> <img alt="Stream" src="https://i.postimg.cc/5yYbJcJJ/image.jpg"/><p>Maasranga Tv</p></div>
+
+<div class="channel" onclick="play('http://alvetv.com/mbtv/8080/index.m3u8')"> <img alt="Stream" src="https://moviebangla.tv/wp-content/uploads/2024/06/moviebanglatv-logo-2.png"/><p>Movie Bangla Tv</p></div>
+
+<div class="channel" onclick="play('http://probashi.alvegroups.com:8081/probashitv/probashi/playlist.m3u8')"> <img alt="Stream" src="https://i.postimg.cc/6Qcv2Zv3/image.jpg"/><p>Probashi Tv</p></div>
+
+<div class="channel" onclick="play('https://edge01.iptv.digijadoo.net/live/boishakhi_tv/playlist.m3u8?md5=KF8xeDtP_OYBn8o2ij9RLw&expires=1730058751&user=d477246e9e724f81a011b847457e71c4')"> <img alt="Stream" src="https://i.postimg.cc/mZvSC0DF/image.png"/><p>Boishakhi Tv</p></div>
+
+<div class="channel" onclick="play('https://edge01.iptv.digijadoo.net/live/atn_news/playlist.m3u8?md5=QfK7dq-aLNuPGucRLBXUJw&expires=1730058736&user=d477246e9e724f81a011b847457e71c4')"> <img alt="Stream" src="https://i.postimg.cc/5NznrfG3/image.png"/><p>ATN News</p></div>
+
+<div class="channel" onclick="play('https://edge01.iptv.digijadoo.net/live/channel_24/playlist.m3u8?md5=DA2WBR8RVgz8pwkS5cHqtw&expires=1730058756&user=d477246e9e724f81a011b847457e71c4')"> <img alt="Stream" src="https://i.postimg.cc/d3VcBLn4/Channel24logo-svg.png"/><p>Channel 24</p></div>
+
+<div class="channel" onclick="play('https://iptvbd.live/metv1080/1080.m3u8')"> <img alt="Stream" src="https://i.postimg.cc/VkcrKg9v/image.jpg"/><p>Me Tv</p></div>
+
+
+
+
+
+
+
+</div>
+
+
+<h2 class="category">India Tv</h2>
+<div class="channel_collapse">
+
+<div class="channel" onclick="play('https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8')"> <img alt="Stream" src="https://i.postimg.cc/FH0tsBmm/image.jpg"/><p>Enterr10 Bangla</p></div>
+<div class="channel" onclick="play('https://isp.sananda.online/Ptv/index.m3u8')"> <img alt="Asports" src=""/><p>Ptv</p></div>		
+
+
+<div class="channel" onclick="play('https://nayem.sananda.online/Fox/tracks-v1a1/mono.m3u8')"> <img alt="Fox" src=""/><p>Fox</p></div>
+
+
+</div>
+	
+<h2 class="category">172.17.50.112</h2>
+<div class="channel_collapse">
+<div class="channel" onclick="play('http://172.17.50.112/live/antbd1001/index.m3u8')"> <img alt="Star Sports 1" src="img/sp1.jpg"/><p>Star Sports 1</p></div>
+
+
+<div class="channel" onclick="play('http://172.17.50.112/live/fifa2022/index.m3u8')"> <img alt="Star Sports 2" src="img/sp2.jpg"/><p>Star Sports 2</p></div>
+
+
+<div class="channel" onclick="play('http://172.17.50.112/live/antbd1002/index.m3u8')"> <img alt="Tsports" src="img/tp.jpg"/><p>Tsports</p></div>				
+
+</div>
+	 
+<h2 class="category">Carton Network</h2>
+
+
+<div class="channel_collapse">
+<div class="channel" onclick="play('https://dplus.gammacdn.workers.dev/videos/113.m3u8')"> <img alt="kids" src="https://i.postimg.cc/1zC4Jtdv/image.png"/><p>Discovery Kids</p></div>				
+
+
+<div class="channel" onclick="play('https://vods1.aynaott.com/kidscreation_test/tracks-v1a1/mono.m3u8')"> <img alt="kids" src="https://i.postimg.cc/kG84JygH/image.jpg"/><p>kids creation</p></div>
+
+
+<div class="channel" onclick="play('http://11plus.live/live/stersports1hd/index.m3u8')"> <img alt="Star Sports 1" src="img/sp1.jpg"/><p>Star Sports 1</p></div>
+
+
+<div class="channel" onclick="play('http://11plus.live/live/starsports2/index.m3u8')"> <img alt="Star Sports 2" src="img/sp1.jpg"/><p>Star Sports 2</p></div>
+
+
+<div class="channel" onclick="play('http://11plus.live/live/starsports3/index.m3u8')"> <img alt="Star Sports 3" src="img/sp3.jpg"/><p>Star Sports 3</p></div>
+
+<div class="channel" onclick="play('http://11plus.live/live/sonyten1/index.m3u8')"> <img alt="sonyten 1" src="img/sony-1.png"/><p>Sonyten 1</p></div>
+
+
+<div class="channel" onclick="play('http://11plus.live/live/sonyten2/index.m3u8')"> <img alt="sonyten 2" src="img/sony-2.png"/><p>Sonyten 2</p></div>	
+
+
+<div class="channel" onclick="play('http://11plus.live/live/sonyten3/index.m3u8')"> <img alt="sonyten 3" src="img/sony-3.png"/><p>Sonyten 3</p></div>
+
+
+<div class="channel" onclick="play('http://11plus.live/live/sonysix/index.m3u8')"> <img alt="sonyten 5" src="img/sony-5.png"/><p>Sonyten 5</p></div>
+
+
+<div class="channel" onclick="play('http://11plus.live/live/18/index.m3u8')"> <img alt="Sports 18" src="img/18.png"/><p>Sports 18</p></div>
+
+
+<div class="channel" onclick="play('http://11plus.live/live/Star_Sport_Select1HD/index.m3u8')"> <img alt="Star select 1" src="img/starselect1.jpg"/><p>select 1</p></div>
+
+
+<div class="channel" onclick="play('http://11plus.live/live/select2/index.m3u8')"> <img alt="Star select 2" src="img/starselect2.jpg"/><p>select 2</p></div>
+
+</div>
+	
+            
+          
+          
+ 
+
+
+
+
+
+
+
+
+ <h2 class="category">Music</h2>
+<div class="channel_collapse">
+
+		
+
+
+<div class="channel" onclick="play('https://d75dqofg5kmfk.cloudfront.net/bpk-tv/9XM/default/9XM-audio_208482_und=208000-video=2137600.m3u8')"> <img alt="Music" src="https://i.postimg.cc/RF6yysgj/image.png"/><p>9x Music</p></div>
+
+
+<div class="channel" onclick="play('https://d1g8wgjurz8via.cloudfront.net/bpk-tv/9Xjalwa/default/9XJalwa-audio_208482_und=208000-video=1087600.m3u8')">  <img alt="Music" src="https://i.postimg.cc/sgHnzPGy/image.png"/><p>9x Jawla</p></div>	
+
+
+<div class="channel" onclick="play('https://d1g8wgjurz8via.cloudfront.net/bpk-tv/9Xtashan/default/9Xtashan.m3u8')">  <img alt="Music" src="https://i.postimg.cc/dQR43cZ5/oy-QOdf-Q0-400x400.jpg"/><p>9X tashan</p></div>		
+
+
+<div class="channel" onclick="play('https://d75dqofg5kmfk.cloudfront.net/bpk-tv/Musicindia/default/musicindia-audio_208482_und=208000-video=2137600.m3u8')"> <img alt="Music" src="https://i.postimg.cc/cLzc2sPL/image.jpg"/><p>Music india</p></div>	
+
+
+<div class="channel" onclick="play('https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/mastiii/622a3500-0aaf-4c82-9ba1-f4ecf731dc79/1.m3u8')"> <img alt="Music" src="https://i.postimg.cc/Znj8cZrZ/image.jpg"/><p>masti</p></div>
+
+
+<div class="channel" onclick="play('https://d1g8wgjurz8via.cloudfront.net/bpk-tv/9Xjhakaas/default/9Xjhakaas.m3u8')"> <img alt="Music" src="https://i.postimg.cc/90q2PF3w/image.jpg"/><p>9X jhakaas</p></div>
+
+
+
+
+
+
+
+</div>
+
+
+<h2 class="category">Sananda.online</h2>
+<div class="channel_collapse">
+<div class="channel" onclick="play('https://isp.sananda.online/Tensorts/index.m3u8')"> <img alt="Skysports" src=""/><p>Tsports</p></div>
+
+
+<div class="channel" onclick="play('https://isp.sananda.online/Ptv/index.m3u8')"> <img alt="Asports" src=""/><p>Ptv</p></div>		
+
+
+<div class="channel" onclick="play('https://nayem.sananda.online/Fox/tracks-v1a1/mono.m3u8')"> <img alt="Fox" src=""/><p>Fox</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+</div>
+
+
+
+
+		
+		
+</div>
+       
+<div id="player">
+</div>
+  
+  </main>
+<script>var player = new Playerjs({id:"player", file:"http://172.17.50.112/live/antbd1002/index.m3u8", poster:"//raw.githubusercontent.com/tvbd/tvbd.github.io/master/img/icc.webp"});</script>
+
+
+<script>
+	var coll = document.getElementsByClassName("category");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.maxHeight){
+		content.style.maxHeight = null;
+		} else {
+		content.style.maxHeight = content.scrollHeight + "px";
+		} 
+	});
+	}
+    function play(file) {
+        try {
+            player.api('file',file);
+            player.api('play');
+            if (screen.width < 641) {
+                window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+                });
+            }
+        }
+        catch(err) {
+            alert(err);
+        }
+    }
+</script>
+<style>
+     @import url('//fonts.googleapis.com/css2?family=PT+Sans:wght@700&amp;display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    color: red;
+    height: 40px;
+    padding: 0 10px;
+    font-size: clamp(1.5rem, 2.0vw, 4rem); 
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgb(48, 25, 52);
+}
+
+body {
+    background-color: #000;
+    overflow-y: hidden;
+}
+
+main {
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+}
+
+#channels {
+    flex: 24.8%;
+    background-color: #000;
+    max-height: 100vh;
+    overflow-y: scroll;
+    margin-top: 50px;
+    margin-left: 0px;
+    overflow-x: hidden;
+   scrollbar-width:thin; 
+}
+.channel_collapse {
+    margin-top: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#player {
+    flex:100%;
+    margin: auto 0px;
+    margin-top: 0px;
+    margin-left: 2px;
+   
+}
+.category {
+    width: 95%;
+    color: #fff;
+    background-color: #000;
+    padding: 8px;
+    border-bottom: solid 2px rgb(229, 238, 238);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: -5px;
+}
+.active, .category:hover {
+    background-color: gray;
+    border-radius: 10px;
+    color: white;
+  }
+.category:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 10px;
+}
+
+.active:after {
+  content: "\2212";
+}
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #363636;
+}
+
+.channel {
+    
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2px;
+    cursor: pointer; 
+    color:#fff;
+    font-size:10px;
+    text-align: center;
+        
+}
+
+.channel p {font-size:12px; text-align: center; margin-top: 1px;color:#fff}
+
+.channel:active {
+    animation: press 0.2s 1 linear;
+}
+
+
+.channel img {
+    width: 60px;
+    height: 50px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 640px) {
+    nav {
+        text-align: center;
+    }
+    main {
+        flex-direction: column-reverse;
+    }
+    body {
+        overflow-y: auto;
+    }
+    #channels {
+        height: fit-content;
+        overflow-y: unset;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .channel {
+        margin-right: 0;
+    }
+    #player {
+        flex: auto;
+        min-width: 192px;
+        min-height: 108px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@keyframes press {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.92);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+</style>
+
+
+
+
+
+</body>
+</html>
