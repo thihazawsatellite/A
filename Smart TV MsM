@@ -59,7 +59,8 @@
 <div class="channel_collapse">
 
 <div class="channel" onclick="play('https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8')"> <img alt="Stream" src="https://i.postimg.cc/FH0tsBmm/image.jpg"/><p>Enterr10 Bangla</p></div>
-<div class="channel" onclick="play('https://mhdtvplay.com/miniProxy.php/http://bdix.livecast.rf.gd/ZeeBangla/index.m3u8')"> <img alt="Stream" src="https://res.cloudinary.com/dfa00wslf/image/upload/v1724066120/images_1_flkcx0.png"/><p>Zee Bangla</p></div>
+
+<div class="channel" onclick="play('http://tv.cloudcdn.me/live/00:1A:79:A4:26:62/4280/120.m3u8')"> <img alt="Stream" src="https://res.cloudinary.com/dfa00wslf/image/upload/v1724066120/images_1_flkcx0.png"/><p>Zee Bangla</p></div>
 
 <div class="channel" onclick="play('https://isp.sananda.online/Ptv/index.m3u8')"> <img alt="Asports" src=""/><p>Ptv</p></div>		
 
