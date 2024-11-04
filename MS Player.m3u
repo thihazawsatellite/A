@@ -206,6 +206,9 @@ https://tv.cloudcdn.online/live/00:1A:79:A4:26:62/4280/44150.m3u8
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1729008925/20241015_221500_psyktc.png", Sony Max 
 http://tv.cloudcdn.me/live/00:1A:79:A4:26:62/4280/185.m3u8 
 
+#EXTINF:-1 group-title="Sony" tvg-logo="https://toffeelive.com/_next/image?url=https%3A%2F%2Fimages.toffeelive.com%2Fimages%2Fprogram%2F641%2Flogo%2F240x240%2Fmobile_logo_440775001666782769.png",Sony Max HD
+https://toffee.iptvbd.xyz/api/set_max_hd.m3u8
+
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0o0veJjt_XWCjWTMSN7gP6XC2qqsHMp9PR9bwbk0UWXlCcKITRdF4zyQ&s=10", Jalsha Moviees HD 
 http://tv.cloudcdn.me/live/00:1A:79:A4:26:62/4280/117.m3u8 
 
