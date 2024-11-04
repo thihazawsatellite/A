@@ -64,7 +64,7 @@
 
 <div class="channel" onclick="play('http://103.145.48.150:90/laosat24/taratv/index.m3u8')"> <img alt="Tarabangla" src="https://res.cloudinary.com/dfa00wslf/image/upload/v1729098624/20241016_230547_dmw7gu.png"/><p>Tarabangla</p></div>		
 
-<div class="channel" onclick="play('https://isp.sananda.online/Ptv/index.m3u8')"> <img alt="Asports" src=""/><p>Ptv</p></div>
+<div class="channel" onclick="play('http://103.205.133.71/ZeeBangla/index.m3u8')"> <img alt="Zee Bangla" src="https://res.cloudinary.com/dfa00wslf/image/upload/v1724066120/images_1_flkcx0.png"/><p>Zee Bangla</p></div>
 
 <div class="channel" onclick="play('https://nayem.sananda.online/Fox/tracks-v1a1/mono.m3u8')"> <img alt="Fox" src=""/><p>Fox</p></div>
 
