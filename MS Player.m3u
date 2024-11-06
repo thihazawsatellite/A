@@ -408,7 +408,7 @@ https://iptvcable.netlify.app/M3U8/POGO.m3u8
 https://streams.spacetoon.com/live/stchannel/smil:livesmil.smil/chunklist.m3u8
 
 #EXTINF:-1 group-title="Discovery" tvg-logo="https://bdfuntv.in/img/discoverybangla.png",Discovery Bangla
-https://raw.githubusercontent.com/subirkumarpaul/My-iptv/main/Discovery.m3u8
+https://5a1178b42cc03.streamlock.net/8220/8220/playlist.m3u8
 
 #EXTINF:-1 group-title="Discovery" tvg-logo="https://bdfuntv.in/img/discoveryscience.png",Discovery Since
 https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Discovery%20Science%20msplayer.m3u8
