@@ -18,13 +18,13 @@ http://watchindia.net:8880/live/80817/80817/2290.m3u8
 https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8
 
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724066120/images_1_flkcx0.png" group-title="Kolkata",Zee Bangla HD
-http://103.205.133.71/ZeeBangla/index.m3u8 
+http://watchindia.net:8880/live/80817/80817/2283.m3u8 
 
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724065895/images_9_z92uwd.jpg" group-title="Kolkata",Colors Bangla HD
 http://watchindia.net:8880/live/80817/80817/2284.m3u8
 
 #EXTINF:-1 tvg-logo="https://res.cloudinary.com/dfa00wslf/image/upload/v1724167312/images_15_aelux6.jpg" group-title="Kolkata",Star Jalsha HD
-http://bdix.livecast.rf.gd/StarJalshaFHD/index.m3u8
+http://watchindia.net:8880/live/80817/80817/2281.m3u8
 
 #EXTINF:0 tvg-logo="http://www.jagobd.com/wp-content/uploads/2016/02/somoynews.jpg?x91288" group-title="BDNews",Shomoy TV 
 https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/somoyt000011226615544544.stream/playlist.m3u8
