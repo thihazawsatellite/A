@@ -43,7 +43,7 @@ https://byphdgllyk.gpcdn.net/hls/DeeptoTV/index.m3u8
 #EXTINF:-1 ,Iqra tv
 https://pull-cdnw.anystream.uk/live/2da6b413018e100097c37f4200000000/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://bdfuntv.in/img/zeebangla.png",Zee bangla hd
-http://watchindia.net:8880/live/80817/80817/2283.m3u8
+
 #EXTINF:-1 ,Sports 18
 http://176.119.29.52/live.ts?channelId=102479&uid=14505&deviceMac=00:1A:79:A7:53:75
 #EXTINF:-1 group-title="SR Entertainment" tvg-logo="https://i.ibb.co/QCCFhSh/20240817-133814.png",Enterr10 Bangla
