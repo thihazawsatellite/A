@@ -1,9 +1,5 @@
 #EXTM3U
 
-### Developer Info
-#EXTINF:-1 tvg-logo="https://i.ibb.co.com/RNtdCVq/1000018368.jpg" group-title="Developer Info: sultanarabi.netlify.app", Designed by Sultan
-https://projects-media.vercel.app/projects/info.html
-
 ### BD General
 #EXTINF:-1 tvg-logo="https://i.ibb.co/dD71xkF/atnnews.png" group-title="BD General", ATN NEWS
 https://app.ncare.live/live-orgin/atnws-sg.stream/playlist.m3u8
