@@ -294,11 +294,9 @@
         let channels = [];
         let categories = new Set();
         let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
-        let currentServer = 'https://m3u.ch/pl/cb83b20184c2e45dce488649dbbdf1ee_737ea37c9d32fe5e6357d6b967b2208d.m3u';
+        let currentServer = 'https://raw.githubusercontent.com/johirryhan087/iptv_playlists/refs/heads/main/https_playlist.m3u';
 
-        const servers = [
-            'https://m3u.ch/pl/cb83b20184c2e45dce488649dbbdf1ee_737ea37c9d32fe5e6357d6b967b2208d.m3u',
-            'https://m3u.ch/pl/cb83b20184c2e45dce488649dbbdf1ee_737ea37c9d32fe5e6357d6b967b2208d.m3u',
+        const servers = ['https://m3u.ch/pl/cb83b20184c2e45dce488649dbbdf1ee_737ea37c9d32fe5e6357d6b967b2208d.m3u',
             'https://m3u.ch/pl/2ee9e7398c043fd6b4f9bd8ec71f4ccc_949ee3a09ea92fabba4b787fbbbe78c6.m3u',
             'https://raw.githubusercontent.com/LITUATUI/M3UPT/main/M3U/M3UPT.m3u',
             'https://example.com/fourth-server.m3u'
