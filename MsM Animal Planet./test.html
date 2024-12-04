@@ -287,21 +287,20 @@
 
     <script>
         let player;
-        const channelGrid = document.getElementById('channelGrid');
-        const currentServerDisplay = document.getElementById('currentServerDisplay');
-        const searchInput = document.getElementById('searchInput');
+const channelGrid = document.getElementById('channelGrid');
+const currentServerDisplay = document.getElementById('currentServerDisplay');
+const searchInput = document.getElementById('searchInput');
 
-        let channels = [];
-        let categories = new Set();
-        let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
-        let currentServer = 'https://raw.githubusercontent.com/johirryhan087/iptv_playlists/refs/heads/main/https_playlist.m3u';
+let channels = [];
+let categories = new Set();
+let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
+let currentServer = 'https://raw.githubusercontent.com/johirryhan087/iptv_playlists/refs/heads/main/https_playlist.m3u';
 
-        const servers = [
-            'https://raw.githubusercontent.com/johirryhan087/iptv_playlists/refs/heads/main/https_playlist.m3u',
-            'https://m3u.ch/pl/2ee9e7398c043fd6b4f9bd8ec71f4ccc_949ee3a09ea92fabba4b787fbbbe78c6.m3u',
-            'https://raw.githubusercontent.com/LITUATUI/M3UPT/main/M3U/M3UPT.m3u',
-            'https://example.com/fourth-server.m3u'
-        ];
+const servers = [
+    'https://raw.githubusercontent.com/johirryhan087/iptv_playlists/refs/heads/main/https_playlist.m3u',
+    'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/MsM-108.m3u8',
+   
+];
 
         function createChannelCard(channel) {
             const isFavorite = favorites.has(channel.url);
