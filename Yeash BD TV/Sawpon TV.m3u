@@ -1,7 +1,7 @@
 #EXTM3U
 
 ### BD General
-#EXTINF:-1 tvg-logo="https://i.ibb.co/dD71xkF/atnnews.png" group-title="BD General", ATN NEWS
+#EXTINF:-1 tvg-logo="https://yt3.googleusercontent.com/P8XVWOQZ2Eel4CqqOeNbt-aPv2cahpsShVCFGoZZA01jzfXGT3hl_BfHq-qrxmp922j64iq_=s900-c-k-c0x00ffffff-no-rj" group-title="BD General", ATN NEWS
 https://app.ncare.live/live-orgin/atnws-sg.stream/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/MmhxR5E.png" group-title="BD General", CHANNEL 24 HD
 https://app.ncare.live/live-orgin/channel24-sg-e8e.stream/playlist.m3u8
