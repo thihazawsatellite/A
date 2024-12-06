@@ -1,1 +1,389 @@
 
+<main class="content">
+    <!-- Sports Channels -->
+    <section>
+      
+      <marquee class="notice-movies" scrollamount="4" style="margin-top:3px;background:#ff0000;color:white;position:relative;padding:10px;overflow:hidden;font-family:var(--font-secondary);border-radius:7px;">
+                    ➤➤ টিভি র দুনিয়াই  RCN 400++TV..দেখবেন.. মুভি খেলাধুলা কাটুন সিরিছ.. দেশি বিদেশি টিভি চ্যানেল... ০১৯১৯১৭২০৬৩  ➤➤
+                </marquee>
+      
+	  
+      <h2 class="section-title">𝑺𝒑𝒐𝒓𝒕𝒔  𝑨𝒍𝒍 𝑪𝒉𝒂𝒏𝒏𝒆𝒍</h2>
+      <div class="channels-grid">
+        <div class="channel" data-url="http://125.209.88.166:45793/BRN/ArySports.stream/playlist.m3u8">
+          <img src="https://yt3.googleusercontent.com/Ve4nWezHoaSvbvgaIoLVq1jsQOjx5ogIA_iFhL8fvNHyXLqFFcqi9rqvOVbHko_zsJ2oFVAkrg=s900-c-k-c0x00ffffff-no-rj" alt="A Sports 1">
+          <span class="channel-quality"></span>
+        </div>
+        <div class="channel" data-url="http://125.209.88.166:45793/BRN/TenSports.stream/playlist.m3u8">
+          <img src="https://pbs.twimg.com/profile_images/442710046955167746/6hNM8Sip_400x400.png" alt="PTV Sports 2">
+          <span class="channel-quality"></span>
+        </div>
+        <div class="channel" data-url="http://125.209.88.166:45793/BRN/TenSports.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/1/12/Ten_Sports_Logo.png" alt="TEN Sports 3">
+          <span class="channel-quality"></span>
+		</div>
+		<div class="channel" data-url="https://criccoder.pages.dev/astro.m3u8">
+          <img src="https://images.now-tv.com/shares/channelPreview/img/en_hk/color/ch674_425_305" alt="astro cricket 4">
+          <span class="channel-quality"></span>
+	    </div>
+	 <div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/96002.m3u8">
+          <img src="https://yt3.googleusercontent.com/yGbA7wHYbj_KXDN4Q7IP4P8ADErUQX6SYJotTN35Kjes6ufM7Kua15xVqzCfq_IEfz8nAlr3=s900-c-k-c0x00ffffff-no-rj" alt="T Sports 5">
+          <span class="channel-quality"></span>
+	    </div>
+	  <div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/93307.m3u8">
+          <img src="https://iili.io/206QLjp.md.png" alt="SONY TEN">
+          <span class="channel-quality"></span>
+		  </div>
+	  <div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/93308.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Ten3_HD.png" alt="Sky-Sports-Cricket 6">
+          <span class="channel-quality"></span>
+		  </div>
+		<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/96003.m3u8">
+          <img src="https://pbs.twimg.com/profile_images/1515657419720105986/-aCmKxKl_400x400.jpg" alt="star Sports 1 hindi 7">
+          <span class="channel-quality"></span>
+	     </div>  
+	 <div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/93301.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_RgCSEeWRX3EGxUjdxvewQ_BFL_7MMn7dDw&amp;s" alt="star Sports 1 hindi 7">
+          <span class="channel-quality"></span>
+	     </div>
+	 <div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/93302.m3u8">
+          <img src="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-1021-j5nj3c68-v1/imageContent-1021-j5nj3c68-m1.png" alt="star Sports 1 7">
+          <span class="channel-quality"></span>
+	      </div>
+	 <div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/93303.m3u8">
+          <img src="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-31405-jm2isen4-v1/imageContent-31405-jm2isen4-m1.png" alt="star Sports 2 7">
+          <span class="channel-quality"></span>
+	      </div>
+	 <div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/93305.m3u8">
+          <img src="https://tvschedule.today/_next/image?url=https%3A%2F%2Fltsk-cdn.s3.eu-west-1.amazonaws.com%2Fjumpstart%2FTemp_Live%2Fcdn%2FHLS%2FChannel%2FimageContent-11791-j9kyqpy8-v1%2FimageContent-11791-j9kyqpy8-m1.png&amp;w=256&amp;q=75" alt="star Sports 2 7">
+          <span class="channel-quality"></span>
+	</div>
+	 </div>
+    </section>
+
+    <!-- Entertainment Channels -->
+    <section>
+      <h2 class="section-title">𝑩𝒂𝒏𝒈𝒍𝒂𝒅𝒆𝒔𝒉 𝑨𝒍𝒍 𝑪𝒉𝒂𝒏𝒏𝒆𝒍</h2>
+      <div class="channels-grid">
+        <div class="channel" data-url="https://app.ncare.live/live-orgin/gazibd.stream/playlist.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG1t5Mt76RpYEigVALW3olQmXSMQOdYKF8xQ&amp;s" alt="GAZI TV HD">
+        </div>
+		 <div class="channel" data-url="https://app.ncare.live/live-orgin/azantv.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2019/04/azantvs.jpg" alt="Azan TV Canada">
+        </div>
+		 <div class="channel" data-url="https://app.ncare.live/live-orgin/salamtv.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/08/salaam.jpg" alt="Salaam Channel">
+        </div>
+		 <div class="channel" data-url="https://app.ncare.live/live-orgin/smtvbd.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/11/smtv.jpg" alt="SM TV">
+        </div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/matribhumitv.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/10/matribhumi.jpg" alt="Matri Bhumi TV">
+        </div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/sanandatv.stream/playlist.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhxg-XQok3Zio3x-iBBamVOQPgpEPzu_gk7KI9apndgj41saHjvqvrU-EiXYqpNMoVMB8&amp;usqp=CAU" alt="Sananda HD">
+        </div>
+		 <div class="channel" data-url="https://app.ncare.live/live-orgin/news21bd.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/11/news21.jpg" alt="NEWS 21 BANGLA">
+        </div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/abtvusa.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2020/05/ABtv-Log-.jpg?x59782" alt="USA – AB TV USA">
+        </div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/jagonews24.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/08/jagonews.jpg" alt="Jago News 24">
+        </div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/hometv.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/08/hometv.jpg" alt="IN-HOME TV">
+        </div>
+		 <div class="channel" data-url="https://app.ncare.live/live-orgin/zodiaktv.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/09/zodiaktv.jpg" alt="IN-Zodiak TV">
+        </div>
+		 <div class="channel" data-url="https://live-stream.utkalbongo.com/utkalbongo/stream7/hls/montvlivestream.m3u8">
+          <img src="https://d3jnkp3lrs2hd5.cloudfront.net/images/320x180/1708ecea-d867-423c-9743-2aabefcd8ecc.jpg" alt="MON AMAR ">
+        </div>
+		<div class="channel" data-url="https://live-stream.utkalbongo.com/utkalbongo/stream10/hls/amarbangla.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_cbLa4udoL5yhHOalgbFbhH3KpXaoEuVyLQ&amp;usqp=CAU" alt="AMAR BANGLA">
+        </div>
+		 <div class="channel" data-url="https://live-stream.utkalbongo.com/utkalbongo/stream2/hls/amarbanglatwolivestream.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeJCsfkU24QMSaiGFzwOtJBRmmHk7-itbSpEeevGi-lTg6Oj1M7fbRWI_CCIjKVj0QlA0&amp;usqp=CAU" alt="AMAR DIGITAL">
+        </div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/channels.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/08/chsbd.jpg" alt="CHANNEL S MUSIC">
+        </div>
+        <div class="channel" data-url="https://app.ncare.live/live-orgin/jagoronitv.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/09/jagoroni.jpg" alt="Jagoronitv">
+		</div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/cmtv.stream/playlist.m3u8">
+          <img src="https://i.ytimg.com/vi/jT3aya0or9E/oar2.jpg?sqp=-oaymwEiCNAFENAFSFqQAgHyq4qpAxEIARUAAAAAJQAAyEI9AICiQw==&amp;rs=AOn4CLD7R6BQEn7YmjiFFR4SL_q8FpDZjQ" alt="Nobanno Tv">
+		</div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/moviebanglalink2.stream/playlist.m3u8">
+          <img src="https://yt3.ggpht.com/a/AGF-l78pOagrG0WEV9RYM_jDCy_2Qir1aZ1nZLw6hw=s900-c-k-c0xffffffff-no-rj-mo" alt="MOVIE BANGLA">
+		</div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/rtvmusic.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2017/01/rtvmusic.jpg?x67896" alt="RTV Music">
+		</div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/islamchbangla.stream/playlist.m3u8">
+          <img src="https://i.ibb.co/VjGgqcc/images-2024-03-02-T220831-913.jpg" alt="ISLAM Bangla">
+		</div>
+		<div class="channel" data-url="https://dzkyvlfyge.erbvr.com/PeaceTvBangla/tracks-v3a1/mono.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/08/logo_50.png" alt="Peace Tv Bangla">
+		 </div>
+		<div class="channel" data-url="https://app.ncare.live/live-orgin/biswabanglatv.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2022/03/Logo-Still.png" alt="BiswaBangla 24 Tv">
+        </div>
+        <div class="channel" data-url="http://162.244.81.200:1935/live/livestream/playlist.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtDD_MV2GSSuGLEgB5x8NWRs6QXFM52MRfMchONWZdniLVXvSZ&amp;s" alt="FBC Tv">
+        </div>
+        <div class="channel" data-url="https://app.ncare.live/live-orgin/cb24.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/01/CB24-PP-LOGO.png" alt="CB24 TV">
+        </div>
+	   <div class="channel" data-url="https://app.ncare.live/live-orgin/bangla21tv000889956-sg.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2016/02/bangla21tv.jpg?x67896" alt="Bangla21 TV">
+	  </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/falgunitv.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/10/falgunitv.jpg" alt="Falguni TV">
+	  </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/tenprime.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/08/Ten-Prime-1467x1536.jpg" alt="Ten Prime">
+	  </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/b24c.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2023/01/b24c-1.jpeg" alt="B24C">
+	  </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/thechanneltv.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2020/07/thechanneltv-1.jpg" alt="THE CHANNEL Tv">
+	  </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/ruposhibangla.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/09/unnamed.webp" alt="Ruposhi Bangla TV">
+	   </div>
+       <div class="channel" data-url="https://iptvbd.live/metv1080/1080.m3u8">
+          <img src="https://i.imgur.com/gTnzXlx.png" alt="Me Tv">
+		   </div>
+       <div class="channel" data-url="https://server1.jadubd.com/channel23/channel23/chunklist_w695517512.m3u8">
+          <img src="https://i.imgur.com/vyo1cXY.jpg" alt="Channel 23 tv">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/atnbd-8-org.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/ATN_Bangla.svg/2560px-ATN_Bangla.svg.png" alt="ATN BANGLA HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/rtv-sg.stream/playlist.m3u8">
+          <img src="https://seeklogo.com/images/R/r-tv-logo-40D288E794-seeklogo.com.png" alt="R TV HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/boishakhitv-org.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Boishakhi_Tv_Logo.png" alt="BOISAKHI TV HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/channeli-8-org.stream/playlist.m3u8">
+          <img src="https://seeklogo.com/images/C/channel-i-logo-F9F1100F83-seeklogo.com.png" alt="CHANNEL I TV HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/banglav000.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Banglavision.svg/1200px-Banglavision.svg.png" alt="BANGLAVISION TV HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/ruposhibangla.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2024/09/unnamed.webp" alt="Ruposhi Bangla TV">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/somoyt000011226615544544.stream/playlist.m3u8">
+          <img src="https://mir-s3-cdn-cf.behance.net/projects/404/c8a563152948061.Y3JvcCwxODUwLDE0NDcsMzYsNzc.png" alt="SOMOY TV HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/jamuna-test-sample-ok.stream/playlist.m3u8">
+          <img src="https://jamunagroup.com.bd/company-images/1662487622-mdshamimislam.png" alt="JAMUNA TV HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/independent-8-org.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Independent_Television_Logo.svg/800px-Independent_Television_Logo.svg.png" alt="INDEPENDENT TV HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/dbcnews.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/99/DBC_News_Logo.svg/800px-DBC_News_Logo.svg.png" alt="DBC TV HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/channel24-sg-e8e.stream/playlist.m3u8">
+          <img src="https://seeklogo.com/images/C/channel-24-logo-B70391F779-seeklogo.com.png" alt="CHANNEL 24 HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/globaltv.stream/playlist.m3u8">
+          <img src="https://i.postimg.cc/SNnz9nWH/Ekhon-Logo.png" alt="EKHON Tv HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/satvoff5666.stream/playlist.m3u8">
+          <img src="https://testing.aibd.org.my/wp-content/uploads/2013/06/satv.png" alt="SA Tv HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/news24local.stream/playlist.m3u8">
+          <img src="https://www.bashundharagroup.com/assets/upload/wallpaper/wallpaper_1525683191.png" alt="NEWS 24 HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/nexustv.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/d/d3/Nexus_Television_Logo.png" alt="NEXUS TV HD">
+		   </div>
+       <div class="channel" data-url="https://byphdgllyk.gpcdn.net/hls/deeptotv/0_1/index.m3u8">
+          <img src="https://i.postimg.cc/RhjVCpnJ/tPZKfLr.png" alt="DEEPTO TV HD">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/ntvuk00332211.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ef/NTV_%28Bangladesh%29_logo.svg/1200px-NTV_%28Bangladesh%29_logo.svg.png" alt="N TV">
+		   </div>
+       <div class="channel" data-url="https://mtv.sunplex.live/MAASRANGA-TV/tracks-v1a1/mono.m3u8">
+          <img src="https://raw.githubusercontent.com/subirkumarpaul/Logo/main/Maasranga%20TV.png" alt="MASRANGA TV">
+	      </div>
+	 <div class="channel" data-url="https://app.ncare.live/live-orgin/ekusheytv-8-org.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d9/Ekushey_Television_Logo.svg/1200px-Ekushey_Television_Logo.svg.png" alt="EKUSHEY TV ">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/ekattor.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2015/10/ekattors-150x150.jpg?x67896" alt="EKATTOR TV">
+	       </div>
+	 <div class="channel" data-url="https://app.ncare.live/live-orgin/mytv-up-off.stream/chunks.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b1/My_TV_Logo.svg/2560px-My_TV_Logo.svg.png" alt="MY TV">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/asian-test-sample-ok-d.stream/playlist.m3u8">
+          <img src="https://www.jagobd.com/wp-content/uploads/2015/12/asiantv.jpg?x67896" alt="ASIAN TV HD">
+	      </div>
+	 <div class="channel" data-url="https://app.ncare.live/live-orgin/anandatv.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Ananda_TV_Logo.png" alt="ANANDA TV">
+		   </div>
+       <div class="channel" data-url="https://app.ncare.live/live-orgin/channel9hd.stream/playlist.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Channel9_bd.svg/1200px-Channel9_bd.svg.png" alt="CHANNEL 9">
+	 </div>
+	 </div>
+    </section>
+
+    <!-- Entertainment Channels -->
+    <section>
+      <h2 class="section-title">𝑲𝒐𝒍𝒌𝒂𝒕𝒂 𝑨𝒍𝒍 𝑪𝒉𝒂𝒏𝒏𝒆𝒍</h2>
+      <div class="channels-grid">
+ <div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/122092.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4fS0bT_zMaTQm53dFR1xka5jstDo2b6i1XQ&amp;s" alt="star jalsha hd">
+        </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/122093.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKHbrwfgwEMTxphY6MTbZpLZI6YnQToFeRtA&amp;s" alt="ZEE BAGLA HD">
+        </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/122094.m3u8">
+          <img src="https://yt3.googleusercontent.com/ytc/AIdro_kEYBGhySRuT-D5kh0s66BySNKGz5W_e3kjIvfVebTr=s900-c-k-c0x00ffffff-no-rj" alt="COLORS BAGLA HD">
+        </div>     
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/131983.m3u8">
+          <img src="https://tvschedule.today/_next/image?url=https%3A%2F%2Fltsk-cdn.s3.eu-west-1.amazonaws.com%2Fjumpstart%2FTemp_Live%2Fcdn%2FHLS%2FChannel%2FimageContent-11514-j9jtp5tk-v1%2FimageContent-11514-j9jtp5tk-m2.png&amp;w=256&amp;q=75" alt="JALSHA MOVIES HD">
+        </div> 
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/131985.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Sun_Bangla.png" alt="Sun_Bangla HD">
+        </div>  
+
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/131988.m3u8">
+          <img src="https://www.videaawards.com/wp-content/uploads/2022/04/1113.png" alt="zee-bangla-cinema">
+       </div>
+	 </div>
+    </section>
+
+  <!-- Entertainment Channels -->
+    <section>
+      <h2 class="section-title">𝑰𝒏𝒅𝒊𝒂 𝑨𝒍𝒍 𝑪𝒉𝒂𝒏𝒏𝒆𝒍</h2>
+      <div class="channels-grid">
+ <div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74772.m3u8">
+          <img src="https://yt3.googleusercontent.com/8qd7eA9IAVlz2b7_09vRj7Yf_Sgno2zsjOidfNOtoVWJZON9arf_0qOsp-PRdUnBtzmNGnQ89w=s900-c-k-c0x00ffffff-no-rj" alt="ZEE TV">
+        </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74775.m3u8">
+          <img src="https://yt3.googleusercontent.com/eu051krrRNQMMi5h6ynfnvhFJzxzSKulJQ42g5v72MQ9Bvv8KdpNIa6yM-0iGpnDgSF0itAD=s900-c-k-c0x00ffffff-no-rj" alt="SONY SET">
+        </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74778.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe6REkm139OePR1rtC1CWz2FBhPZE3P14T4w&amp;s" alt="STAR PLUS">
+         </div> 
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74781.m3u8">
+          <img src="https://tvschedule.today/_next/image?url=https%3A%2F%2Fltsk-cdn.s3.eu-west-1.amazonaws.com%2Fjumpstart%2FTemp_Live%2Fcdn%2FHLS%2FChannel%2FimageContent-155-j5frd2uo-v1%2FimageContent-155-j5frd2uo-m1.png&amp;w=256&amp;q=75" alt="COLORS HD">
+        </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74784.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ2_3Bz1YHwpM7HcpLRftIpTuLnY70QPsGGw&amp;s" alt="STAR BARAT">
+         </div> 	 
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74787.m3u8">
+          <img src="https://yt3.googleusercontent.com/WrjDeIWr2pmRdCKFuEDfvkovr0O_o7gyfT_J_AMJjFk5KR9HGQVirOP0DeimyAoBUHRfH79X=s900-c-k-c0x00ffffff-no-rj" alt="SONY SAB">
+         </div> 	 
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74790.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa8YiA52CsTkEmROetEbPCohv4kJMrL-SqJA&amp;s" alt="&amp; TV">
+         </div> 	 
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74770.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtN46pNmQGzX1J8CHyt82v5wyJw3nwKgSLoA&amp;s" alt="DESHI TV">
+         </div> 	 
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/85216.m3u8">
+          <img src="https://medianet.mv/media/channel/162x0-icon.png" alt="SONY MAX">
+         </div> 	 
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/85208.m3u8">
+          <img src="https://tvtick.com/img/channel/13.png" alt="STAR GOOLD">
+         </div>  	 
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/85212.m3u8">
+          <img src="https://tvtick.com/img/channel/1175.png" alt="ZEE CINAMA">
+         </div> 
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/85215.m3u8">
+          <img src="https://tvtick.com/img/channel/21.png" alt="ZEE ACTION">
+         </div> 	
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/85219.m3u8">
+          <img src="https://tvschedule.today/_next/image?url=https%3A%2F%2Fltsk-cdn.s3.eu-west-1.amazonaws.com%2Fjumpstart%2FTemp_Live%2Fcdn%2FHLS%2FChannel%2FimageContent-149-j5frd0jc-v2%2FimageContent-149-j5frd0jc-m2.png&amp;w=256&amp;q=75" alt="COLORS CINAEFIX">
+         </div>   
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/89913.m3u8">
+          <img src="https://assets.airtel.in/static-assets/cms/dth-images/digital-tv-airtel-specials-logo/Miniplex_HD_300x113.png" alt="MINIPLEX">
+         </div>    
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/89915.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCSiqpO7x0Ng3iSnSdWtk1ob776cKrJ_ciCA&amp;s" alt="AND XPLORE">
+         </div>   
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/100208.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Rishtey_Cineplex.png" alt="colors suoerhit">
+         </div>     
+<!-- Entertainment Channels -->
+    <section>
+   <h2 class="section-title">𝑰𝒏𝒅𝒊𝒂 𝑨𝒍𝒍 𝑴𝒖𝒔𝒊𝒄 𝑪𝒉𝒂𝒏𝒏𝒆𝒍</h2>
+   <div class="channels-grid">    
+   
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/118940.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/YRF_Music.png" alt="YRF MUSIC">
+         </div>     
+<div class="channel" data-url="https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8">
+          <img src="https://play-lh.googleusercontent.com/zooER-oa-NqGzAR4HjEUGYBOfAcWvyoWGGIjZn3peR6xveFznWN6LvXCP_5A5zoB7gdE=w600-h300-pc0xffffff-pd" alt="JOO MUSIC">
+         </div>
+<div class="channel" data-url="https://epiconvh.s.llnwi.net/showbox/master.m3u8">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/00/ShowBox_TV_logo.png/220px-ShowBox_TV_logo.png" alt="SHOW BOX">  
+          </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/62160.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/B4U_Music.png" alt="B4U MUSIC">
+        </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/62180.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/9x_Jhakaas.png" alt="9XM JAKASS">             
+        </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/62183.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Mastiii.png" masti="" "="">     
+         </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/62238.m3u8">
+          <img src="https://seeklogo.com/images/Z/zing-tv-logo-2FBE8076BD-seeklogo.com.png" alt="ZING"> 
+       </div>     
+<!-- Entertainment Channels -->
+    <section>
+   <h2 class="section-title">𝑰𝒏𝒅𝒊𝒂 𝑨𝒍𝒍 𝒌𝒊𝒅𝒔 𝑪𝒉𝒂𝒏𝒏𝒆𝒍</h2>
+   <div class="channels-grid">  
+
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/92412.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/sonic_Hindi.png" sonic"="">     
+         </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/92413.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Discovery_Kids_2.png" alt="DISCOVERY KIDS">
+          </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/92414.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Nick_Hindi.png" alt="NICK"> 
+          </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/92420.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Sony_Yay_Hindi.png" alt="Sony_Yay"> 
+  </div>     
+<!-- Entertainment Channels -->
+    <section>
+   <h2 class="section-title">𝑫𝒐𝒄𝒖𝒎𝒆𝒏𝒕𝒂𝒓𝒚 𝑨𝒍𝒍 𝑪𝒉𝒂𝒏𝒏𝒆𝒍</h2>
+   <div class="channels-grid">  
+
+<div class="channel" data-url="https://denver1769.pages.dev/Discovery/animal_planet_hd_hindi.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Animal_Planet_HD.png" animal="" planet"="">     
+         </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74433.m3u8">
+          <img src="https://yt3.googleusercontent.com/ytc/AIdro_mg_LZ8mDZCXi_kAJT5mUkmtn8OKSS67HhG66QWH5pv1lo=s900-c-k-c0x00ffffff-no-rj" alt="Travel_XP">
+          </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74484.m3u8">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOYEGbiO9XYF58S_-vA8q16mC5VQD0cmLteJ3jM6WiwBu1uciic9C2e50VsZb0CBaCIZI&amp;usqp=CAU" alt="national geographic"> 
+          </div>
+<div class="channel" data-url="http://bostv.one:8080/live/24345670/24345670/74485.m3u8">
+          <img src="https://m.media-amazon.com/images/I/31lAqwFkloL._AC_.jpg" alt="national"> 
+          </div>
+<div class="channel" data-url="https://denver1769.pages.dev/Discovery/discovery_hd_english.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Discovery_Channel_English.png" alt="Discovery"> 
+          </div>
+<div class="channel" data-url="https://cdn09jtedge.indihometv.com/joss/194/discoveryasia/index.m3u8">
+          <img src="https://jiotvimages.cdn.jio.com/dare_images/images/Discovery_Channel_Hindi.png" alt="Discovery"> 
+
+
+
+
+
+   </div>
+    </div></section>
+  </div></section></div></section></div></section></main>
