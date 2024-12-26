@@ -339,7 +339,7 @@
     <!-- Login Form -->
     <div class="login-container" id="loginContainer">
         <div class="login-form">
-            <h2>Login to Yeash TV</h2>
+            <h2>Login to RCN TV</h2>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Enter your email">
@@ -465,13 +465,10 @@
         let channels = [];
         let categories = new Set();
         let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
-        let currentServer = 'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/MS%20Player.m3u';
+        let currentServer = 'https://shz.al/~webtv356';
 
         const servers = [
-            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/MS%20Player.m3u',
-            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Movie.m3u',
-            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Radio.m3u',
-            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u'
+            'https://shz.al/~webtv356',
         ];
 
         function createChannelCard(channel) {
