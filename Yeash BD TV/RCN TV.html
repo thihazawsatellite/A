@@ -340,7 +340,7 @@
     <div class="login-container" id="loginContainer">
         <div class="login-form">
           <h2><img alt="MS-Player" height="40" src="https://www.short.ink/OjiVmmkG4EC" width="60" /></h2>
-            <h2>Login to Yeash TV</h2>
+            <h2>Login to RCN TV</h2>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Enter your email">
@@ -466,13 +466,11 @@
         let channels = [];
         let categories = new Set();
         let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
-        let currentServer = 'https://m3u.ch/pl/10154bbac27fa9a07fe80915db791864_f14c606dfbffea627388f8c7bbe04406.m3u';
+        let currentServer = 'https://rcnmedia-app.short.gy/f3km7X';
 
         const servers = [
-            'https://m3u.ch/pl/10154bbac27fa9a07fe80915db791864_f14c606dfbffea627388f8c7bbe04406.m3u',
-            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Movie.m3u',
-            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Radio.m3u',
-            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u'
+            'https://rcnmedia-app.short.gy/f3km7X',
+            
         ];
 
         function createChannelCard(channel) {
@@ -683,5 +681,6 @@
             }
         });
     </script>
+    <script async src="https://sdk.owids.com/js/app.js#id=chqui1hba1fp5oqf1lkg"></script>
 </body>
 </html>
