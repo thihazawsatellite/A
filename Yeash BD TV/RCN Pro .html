@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
     <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
-    <link rel="icon" type="image/png" href="https://i.ibb.co/80mNNgC/plus-tv.png">
-
+    
     <style>
         * {
             margin: 0;
@@ -156,6 +155,30 @@
             background: #000;
         }
 
+        /* Video.js Custom Styles */
+.video-js {
+    width: 100%;
+    height: 100%;
+}
+
+.video-js .vjs-tech {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.vjs-poster {
+    background-size: cover;
+}
+
+.video-js .vjs-big-play-button {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+        
         .channel-section {
             flex: 1;
             display: flex;
@@ -467,10 +490,10 @@
         let channels = [];
         let categories = new Set();
         let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
-        let currentServer = 'https://rcnmedia-app.short.gy/f3km7X';
+        let currentServer = 'http://m3u.ch/pl/68fce9ac058bf08c6c81e0046af491e9_1454d548c8c6adbbce0513a613e78791.m3u';
 
         const servers = [
-            'https://rcnmedia-app.short.gy/f3km7X',
+            'http://m3u.ch/pl/68fce9ac058bf08c6c81e0046af491e9_1454d548c8c6adbbce0513a613e78791.m3u',
             
         ];
 
