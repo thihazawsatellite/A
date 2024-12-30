@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Yeash TV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/80mNNgC/plus-tv.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SolaimanLipi', Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Login Form Styles */
+        .login-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #0056b3;
+        }
+
+        .logout-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .logout-btn:hover {
+            background: #c82333;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* No Internet Popup Styles */
+        #noInternetPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 10000;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        #noInternetPopup i {
+            font-size: 40px;
+            color: red;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        #noInternetPopup h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        #noInternetPopup p {
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        /* Yeash TV Styles */
+        .player-container {
+            background: black;
+            width: 100%;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .video-container {
+            width: 100%;
+            position: relative;
+            background: #000;
+        }
+
+        .channel-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            overflow: hidden;
+            width: 100%;
+            max-height: 400px;
+        }
+
+        .channel-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            padding: 8px;
+            gap: 8px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .channel-grid {
+            padding: 0;
+            overflow-y: auto;
+            flex: 1;
+            max-height: calc(400px - 100px);
+        }
+
+        .channel-card {
+            background: #fff;
+            padding: 12px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .channel-card:hover {
+            background: #f8f9fa;
+        }
+
+        .channel-image {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+
+        .channel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .channel-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .channel-name {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .channel-category {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .favorite-btn {
+            border: none;
+            background: #f0f0f0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .favorite-btn.active {
+            color: #dc3545;
+            background: #ffe6e6;
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 12px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border-radius: 8px;
+            color: #666;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .search-container {
+            padding: 8px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .player-container {
+                height: 33vh;
+            }
+
+            .video-container {
+                height: 100%;
+            }
+
+            .channel-section {
+                max-height: 67vh;
+            }
+
+            .channel-grid {
+                max-height: calc(67vh - 100px);
+            }
+        }
+
+        @media (min-width: 769px) {
+            body {
+                padding: 20px;
+            }
+
+            .player-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                border-radius: 12px;
+                overflow: hidden;
+            }
+
+            .video-container {
+                aspect-ratio: 16/9;
+            }
+
+            .channel-section {
+                max-width: 1200px;
+                margin: 20px auto 0;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Login Form -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-form">
+<h2><img alt="MS-Player" height="40" src="https://www.short.ink/e7m71lmNgMV" width="60" /></h2>
+            <h2>Login to Yeash TV</h2>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button class="login-btn" onclick="login()">Login</button>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" style="display: none;">
+        <div class="player-container">
+            <div class="video-container" id="videoPlayer"></div>
+        </div>
+
+        <div class="channel-section">
+            <div class="channel-tabs">
+                <button class="tab-btn active" id="allChannelsTab">
+                    <i class="fas fa-globe"></i> All
+                </button>
+                <button class="tab-btn" id="categoriesTab">
+                    <i class="fas fa-list"></i> Categories
+                </button>
+                <button class="tab-btn" id="favoritesTab">
+                    <i class="fas fa-heart"></i> Favorites
+                </button>
+                <button class="tab-btn" id="serverChangeTab">
+                    <i class="fas fa-server"></i> Server <span id="currentServerDisplay">1</span>
+                </button>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search channels..." id="searchInput">
+            </div>
+
+            <div class="channel-grid" id="channelGrid"></div>
+        </div>
+    </div>
+
+    <!-- Logout Button -->
+    <button class="logout-btn" id="logoutBtn" onclick="logout()" style="display: none;">
+        <i class="fas fa-sign-out-alt"></i> Logout
+    </button>
+
+    <!-- No Internet Connection Popup -->
+    <div id="noInternetPopup">
+        <i class="fas fa-wifi"></i>
+        <h3>No Internet Connection</h3>
+        <p>Please check your internet connection</p>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC6xiG5b0yMWkLl4ZN0G4hzpJmoyW_Tp6I",
+            authDomain: "msm-4-39637.firebaseapp.com",
+            projectId: "msm-4-39637",
+            storageBucket: "msm-4-39637.appspot.com",
+            messagingSenderId: "933945465803",
+            appId: "1:933945465803:web:f3c4ce2cc93f901b23f44e"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        window.auth = auth;
+
+        onAuthStateChanged(auth, (user) => {
+            const loginContainer = document.getElementById('loginContainer');
+            const mainContent = document.getElementById('mainContent');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            if (user) {
+                loginContainer.style.display = 'none';
+                mainContent.style.display = 'block';
+                logoutBtn.style.display = 'block';
+                if (typeof parseM3U === 'function') {
+                    parseM3U(servers[0]);
+                }
+            } else {
+                loginContainer.style.display = 'flex';
+                mainContent.style.display = 'none';
+                logoutBtn.style.display = 'none';
+            }
+        });
+
+        window.login = async () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMsg = document.getElementById('errorMessage');
+
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                errorMsg.textContent = '';
+            } catch (error) {
+                errorMsg.textContent = error.message;
+            }
+        };
+
+        window.logout = async () => {
+            try {
+                await signOut(auth);
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
+        };
+    </script>
+
+    <!-- Main Application Script -->
+    <script>
+        let player;
+        const channelGrid = document.getElementById('channelGrid');
+        const currentServerDisplay = document.getElementById('currentServerDisplay');
+        const searchInput = document.getElementById('searchInput');
+        const noInternetPopup = document.getElementById('noInternetPopup');
+
+        let channels = [];
+        let categories = new Set();
+        let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
+        let currentServer = 'https://www.short.ink/nmUVewdT7Dg';
+
+        const servers = [
+            'https://www.short.ink/nmUVewdT7Dg',
+            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Movie.m3u',
+            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Radio.m3u',
+            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u'
+        ];
+
+        function createChannelCard(channel) {
+            const isFavorite = favorites.has(channel.url);
+            return `
+                <div class="channel-card" onclick="playChannel('${channel.url}')">
+                    <div class="channel-image">
+                        <img src="${channel.logo}" alt="${channel.title}" loading="lazy" onerror="this.src='/api/placeholder/320/180'">
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-name">${channel.title}</div>
+                        <div class="channel-category">${channel.category}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="favorite-btn ${isFavorite ? 'active' : ''}" 
+                                onclick="toggleFavorite(event, '${channel.url}')">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function playChannel(url) {
+            if (player) {
+                player.destroy();
+            }
+            player = new Clappr.Player({
+                source: url,
+                parentId: '#videoPlayer',
+                width: '100%',
+                height: '100%',
+                autoPlay: true,
+                mute: false,
+                playback: {
+                    playInline: true,
+                }
+            });
+        }
+
+        async function parseM3U(url) {
+            try {
+                channelGrid.innerHTML = '<div class="loading"></div>';
+                const proxyUrl = 'https://api.allorigins.win/raw?url=';
+                const response = await fetch(proxyUrl + encodeURIComponent(url));
+                
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const text = await response.text();
+                const lines = text.split('\n');
+                
+                channels = [];
+                categories.clear();
+                
+                let currentChannel = {};
+                
+                lines.forEach(line => {
+                    line = line.trim();
+                    if (line.startsWith('#EXTINF:')) {
+                        const info = line.split(',')[1];
+                        const categoryMatch = line.match(/group-title="([^"]+)"/);
+                        const category = categoryMatch ? categoryMatch[1] : 'Others';
+                        const logoMatch = line.match(/tvg-logo="([^"]+)"/);
+                        const logo = logoMatch ? logoMatch[1] : '/api/placeholder/320/180';
+                        
+                        currentChannel = {
+                            title: info,
+                            category: category,
+                            logo: logo
+                        };
+                        categories.add(category);
+                    } else if (line.startsWith('http')) {
+                        currentChannel.url = line;
+                        channels.push(currentChannel);
+                        currentChannel = {};
+                    }
+                });
+                
+                showAllChannels();
+            } catch (error) {
+                console.error('Error loading M3U:', error);
+                channelGrid.innerHTML = '<div class="error-message">Error loading channels. Please try again later.</div>';
+            }
+        }
+
+        function showAllChannels() {
+            channelGrid.innerHTML = channels.map(channel => createChannelCard(channel)).join('');
+        }
+
+        function showCategories() {
+            channelGrid.innerHTML = Array.from(categories)
+                .sort()
+                .map(category => {
+                    const count = channels.filter(ch => ch.category === category).length;
+                    return `
+                        <div class="channel-card" onclick="showChannelsByCategory('${category}')">
+                            <div class="channel-info">
+                                <div class="channel-name">${category}</div>
+                                <div class="channel-category">${count} Channels</div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+        }
+
+        function showChannelsByCategory(category) {
+            const filteredChannels = channels.filter(ch => ch.category === category);
+            channelGrid.innerHTML = filteredChannels.map(channel => createChannelCard(channel)).join('');
+        }
+
+        function showFavorites() {
+            const favoriteChannels = channels.filter(ch => favorites.has(ch.url));
+            channelGrid.innerHTML = favoriteChannels.length > 0 
+                ? favoriteChannels.map(channel => createChannelCard(channel)).join('')
+                : '<div class="no-favorites">No favorite channels yet</div>';
+        }
+
+        function toggleFavorite(event, url) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            if (favorites.has(url)) {
+                favorites.delete(url);
+            } else {
+                favorites.add(url);
+            }
+            
+            localStorage.setItem('favorites', JSON.stringify(Array.from(favorites)));
+            
+            const currentTab = document.querySelector('.tab-btn.active');
+            if (currentTab.id === 'favoritesTab') {
+                showFavorites();
+            } else {
+                const btn = event.target.closest('.favorite-btn');
+                btn.classList.toggle('active');
+            }
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredChannels = channels.filter(channel => 
+                channel.title.toLowerCase().includes(searchTerm) ||
+                channel.category.toLowerCase().includes(searchTerm)
+            );
+            channelGrid.innerHTML = filteredChannels.map(channel => createChannelCard(channel)).join('');
+        });
+
+        document.getElementById('serverChangeTab').onclick = function() {
+            const currentServerIndex = servers.indexOf(currentServer);
+            const nextServerIndex = (currentServerIndex + 1) % servers.length;
+            currentServer = servers[nextServerIndex];
+            currentServerDisplay.textContent = nextServerIndex + 1;
+            parseM3U(currentServer);
+        };
+
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                switch(btn.id) {
+                    case 'allChannelsTab':
+                        showAllChannels();
+                        break;
+                    case 'categoriesTab':
+                        showCategories();
+                        break;
+                    case 'favoritesTab':
+                        showFavorites();
+                        break;
+                }
+            });
+        });
+
+        // Internet Connection Check
+        function checkInternetConnection() {
+            if (!navigator.onLine) {
+                noInternetPopup.style.display = 'block';
+                if (player) {
+                    player.stop();
+                }
+            } else {
+                noInternetPopup.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('load', checkInternetConnection);
+        window.addEventListener('online', () => {
+            checkInternetConnection();
+            if (player && player.options.source) {
+                player.play();
+            }
+        });
+        window.addEventListener('offline', checkInternetConnection);
+        setInterval(checkInternetConnection, 10000);
+
+        // Prevent Right Click
+        document.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+        });
+
+        // Block Developer Tools Shortcuts
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'F12' || 
+                (event.ctrlKey && event.shiftKey && ['I', 'J', 'C'].includes(event.key)) || 
+                (event.ctrlKey && event.key === 'U')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
