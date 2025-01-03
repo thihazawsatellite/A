@@ -1,1 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Yeash TV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://i.ibb.co/80mNNgC/plus-tv.png">
+    <link rel="stylesheet" href="playerjs.css">
+    <script src="https://promoviex.vercel.app/playlist/playjs/playerjs.js" type="text/javascript"></script>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SolaimanLipi', Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header and Search Styles */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .search-container {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .search-input {
+            width: calc(100% - 50px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: none;
+            font-size: 20px;
+            color: #666;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Category Grid Styles */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .category-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+        }
+
+        .category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .category-icon {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .category-name {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .category-count {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background: #fff;
+            z-index: 1000;
+            transition: right 0.3s ease;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .menu-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .menu-header {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-logo {
+            height: 60px;
+            width: 100%;
+        }
+
+        .menu-close {
+            border: none;
+            background: none;
+            font-size: 20px;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .menu-items {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+        }
+
+        .menu-item:hover {
+            background: #f5f5f5;
+        }
+
+        .menu-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .menu-overlay.active {
+            display: block;
+        }
+
+        /* Login Form Styles */
+        .login-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        
+        
+        /* Player Styles */
+        .player-container {
+            background: black;
+            width: 100%;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .video-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            position: relative;
+            background: #000;
+            overflow: hidden;
+        }
+
+        #videoPlayer {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Channel Section Styles */
+        .channel-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            overflow: hidden;
+            width: 100%;
+            max-height: 400px;
+        }
+
+        .channel-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            padding: 8px;
+            gap: 8px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .channel-grid {
+            padding: 0;
+            overflow-y: auto;
+            flex: 1;
+            max-height: calc(400px - 100px);
+        }
+
+        .channel-card {
+            background: #fff;
+            padding: 12px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .channel-card:hover {
+            background: #f8f9fa;
+        }
+
+        .channel-image {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+
+        .channel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .channel-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .channel-name {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .channel-category {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .favorite-btn {
+            border: none;
+            background: #f0f0f0;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .favorite-btn.active {
+            color: #dc3545;
+            background: #ffe6e6;
+        }
+
+        .tab-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 12px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            border-radius: 8px;
+            color: #666;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn.active {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Loading Animation */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .video-container {
+                height: 33vh;
+            }
+
+            .player-container {
+                height: 33vh;
+            }
+
+            .channel-section {
+                max-height: 67vh;
+            }
+
+            .channel-grid {
+                max-height: calc(67vh - 100px);
+            }
+        }
+
+        @media (min-width: 769px) {
+            body {
+                padding: 20px;
+            }
+
+            .player-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                border-radius: 12px;
+                overflow: hidden;
+            }
+
+            .channel-section {
+                max-width: 1200px;
+                margin: 20px auto 0;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+        }
+
+        @media (orientation: landscape) and (max-width: 900px) {
+            .video-container {
+                height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Login Form -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-form">
+            <h2><img alt="MS-Player" height="40" src="https://www.short.ink/e7m71lmNgMV" width="60" /></h2>
+            <h2>Login to Yeash TV</h2>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <button class="login-btn" onclick="login()">Login</button>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div id="mainContent" style="display: none;">
+        <!-- Player Container -->
+        <div class="player-container">
+            <div class="video-container">
+                <div id="videoPlayer"></div>
+            </div>
+        </div>
+
+        <!-- Header with Search and Menu -->
+        <div class="header">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search channels..." id="searchInput">
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="menu-content">
+                <div class="menu-header">
+                    <img src="https://www.short.ink/NrVwzld0Ibd" alt="Logo" class="menu-logo">
+                    <button class="menu-close" id="menuClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="menu-items">
+                    <a href="https://tvmsm.weebly.com/" class="menu-item">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <a href="https://tvsmsm.weebly.com/yeashtv/" target="_blank" class="menu-item">
+                        <i class="fas fa-globe"></i>
+                        Visit Website
+                    </a>
+                    <button class="menu-item" onclick="logout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="channel-section">
+            <div class="channel-tabs">
+                <button class="tab-btn active" id="allChannelsTab">
+                    <i class="fas fa-globe"></i> All
+                </button>
+                <button class="tab-btn" id="categoriesTab">
+                    <i class="fas fa-list"></i> Categories
+                </button>
+                <button class="tab-btn" id="favoritesTab">
+                    <i class="fas fa-heart"></i> Favorites
+                </button>
+                <button class="tab-btn" id="serverChangeTab">
+                    <i class="fas fa-server"></i> Server <span id="currentServerDisplay">1</span>
+                </button>
+            </div>
+
+            <div class="channel-grid" id="channelGrid"></div>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC6xiG5b0yMWkLl4ZN0G4hzpJmoyW_Tp6I",
+            authDomain: "msm-4-39637.firebaseapp.com",
+            projectId: "msm-4-39637",
+            storageBucket: "msm-4-39637.appspot.com",
+            messagingSenderId: "933945465803",
+            appId: "1:933945465803:web:f3c4ce2cc93f901b23f44e"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        window.auth = auth;
+
+        onAuthStateChanged(auth, (user) => {
+            const loginContainer = document.getElementById('loginContainer');
+            const mainContent = document.getElementById('mainContent');
+
+            if (user) {
+                loginContainer.style.display = 'none';
+                mainContent.style.display = 'block';
+                if (typeof parseM3U === 'function') {
+                    parseM3U(servers[0]);
+                }
+            } else {
+                loginContainer.style.display = 'flex';
+                mainContent.style.display = 'none';
+            }
+        });
+
+        window.login = async () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMsg = document.getElementById('errorMessage');
+
+            try {
+                await signInWithEmailAndPassword(auth, email, password);
+                errorMsg.textContent = '';
+            } catch (error) {
+                errorMsg.textContent = error.message;
+            }
+        };
+
+        window.logout = async () => {
+            try {
+                await signOut(auth);
+            } catch (error) {
+                console.error('Logout error:', error);
+            }
+        };
+    </script>
+    
+    <!-- Main Application Script -->
+    <script>
+        let player;
+        const channelGrid = document.getElementById('channelGrid');
+        const currentServerDisplay = document.getElementById('currentServerDisplay');
+        const searchInput = document.getElementById('searchInput');
+
+        let channels = [];
+        let categories = new Set();
+        let favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
+        let currentServer = 'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/channel.m3u';
+
+        const servers = [
+            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/channel.m3u',
+            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Movie.m3u'
+        ];
+
+        // Initialize player
+        player = new Playerjs({
+            id: "videoPlayer",
+            file: "",
+            autoplay: true,
+            volume: 100,
+            poster: "",
+            controls: true,
+            mute: false,
+            pauseOnClick: true,
+            fullscreen: true,
+            playsinline: true,
+        });
+
+        function createChannelCard(channel) {
+            const isFavorite = favorites.has(channel.url);
+            return `
+                <div class="channel-card" onclick="playChannel('${channel.url}')">
+                    <div class="channel-image">
+                        <img src="${channel.logo}" alt="${channel.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/50'">
+                    </div>
+                    <div class="channel-info">
+                        <div class="channel-name">${channel.title}</div>
+                        <div class="channel-category">${channel.category}</div>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="favorite-btn ${isFavorite ? 'active' : ''}" 
+                                onclick="toggleFavorite(event, '${channel.url}')">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showCategories() {
+            const categoryIcons = {
+                'Sports': 'fa-futbol',
+                'News': 'fa-newspaper',
+                'Movies': 'fa-film',
+                'Entertainment': 'fa-tv',
+                'Music': 'fa-music',
+                'Kids': 'fa-child',
+                'Documentary': 'fa-photo-film',
+                'Religious': 'fa-pray',
+                'default': 'fa-play-circle'
+            };
+
+            channelGrid.className = 'channel-grid category-grid';
+            channelGrid.innerHTML = Array.from(categories)
+                .sort()
+                .map(category => {
+                    const count = channels.filter(ch => ch.category === category).length;
+                    const iconClass = categoryIcons[category] || categoryIcons['default'];
+                    
+                    return `
+                        <div class="category-card" onclick="showChannelsByCategory('${category}')">
+                            <div class="category-icon">
+                                <i class="fas ${iconClass}"></i>
+                            </div>
+                            <div class="category-name">${category}</div>
+                            <div class="category-count">${count} Channels</div>
+                        </div>
+                    `;
+                }).join('');
+        }
+
+        function playChannel(url) {
+            if (player) {
+                player.api('file', url);
+                player.api('play');
+            }
+        }
+
+        async function parseM3U(url) {
+            try {
+                channelGrid.innerHTML = '<div class="loading"></div>';
+                const proxyUrl = 'https://api.allorigins.win/raw?url=';
+                const response = await fetch(proxyUrl + encodeURIComponent(url));
+                
+                if (!response.ok) throw new Error('Network response was not ok');
+                
+                const text = await response.text();
+                const lines = text.split('\n');
+                
+                channels = [];
+                categories.clear();
+                
+                let currentChannel = {};
+                
+                lines.forEach(line => {
+                    line = line.trim();
+                    if (line.startsWith('#EXTINF:')) {
+                        const info = line.split(',')[1];
+                        const categoryMatch = line.match(/group-title="([^"]+)"/);
+                        const category = categoryMatch ? categoryMatch[1] : 'Others';
+                        const logoMatch = line.match(/tvg-logo="([^"]+)"/);
+                        const logo = logoMatch ? logoMatch[1] : 'https://via.placeholder.com/50';
+                        
+                        currentChannel = {
+                            title: info,
+                            category: category,
+                            logo: logo
+                        };
+                        categories.add(category);
+                    } else if (line.startsWith('http')) {
+                        currentChannel.url = line;
+                        channels.push(currentChannel);
+                        currentChannel = {};
+                    }
+                });
+                
+                showAllChannels();
+            } catch (error) {
+                console.error('Error loading M3U:', error);
+                channelGrid.innerHTML = '<div class="error-message">Error loading channels. Please try again later.</div>';
+            }
+        }
+
+        function showAllChannels() {
+            channelGrid.className = 'channel-grid';
+            channelGrid.innerHTML = channels.map(channel => createChannelCard(channel)).join('');
+        }
+
+        function showChannelsByCategory(category) {
+            channelGrid.className = 'channel-grid';
+            const filteredChannels = channels.filter(ch => ch.category === category);
+            channelGrid.innerHTML = filteredChannels.map(channel => createChannelCard(channel)).join('');
+        }
+
+        function showFavorites() {
+            channelGrid.className = 'channel-grid';
+            const favoriteChannels = channels.filter(ch => favorites.has(ch.url));
+            channelGrid.innerHTML = favoriteChannels.length > 0 
+                ? favoriteChannels.map(channel => createChannelCard(channel)).join('')
+                : '<div class="no-favorites">No favorite channels yet</div>';
+        }
+
+        function toggleFavorite(event, url) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            if (favorites.has(url)) {
+                favorites.delete(url);
+            } else {
+                favorites.add(url);
+            }
+            
+            localStorage.setItem('favorites', JSON.stringify(Array.from(favorites)));
+            
+            const currentTab = document.querySelector('.tab-btn.active');
+            if (currentTab.id === 'favoritesTab') {
+                showFavorites();
+            } else {
+                const btn = event.target.closest('.favorite-btn');
+                btn.classList.toggle('active');
+            }
+        }
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const menuClose = document.getElementById('menuClose');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuOverlay = document.createElement('div');
+            menuOverlay.className = 'menu-overlay';
+            document.body.appendChild(menuOverlay);
+
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+                menuOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+
+            function closeMenu() {
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            menuClose.addEventListener('click', closeMenu);
+            menuOverlay.addEventListener('click', closeMenu);
+        });
+
+        // Search functionality
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredChannels = channels.filter(channel => 
+                channel.title.toLowerCase().includes(searchTerm) ||
+                channel.category.toLowerCase().includes(searchTerm)
+            );
+            channelGrid.innerHTML = filteredChannels.map(channel => createChannelCard(channel)).join('');
+        });
+
+        // Tab functionality
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                switch(btn.id) {
+                    case 'allChannelsTab':
+                        showAllChannels();
+                        break;
+                    case 'categoriesTab':
+                        showCategories();
+                        break;
+                    case 'favoritesTab':
+                        showFavorites();
+                        break;
+                }
+            });
+        });
+
+        // Server change functionality
+        document.getElementById('serverChangeTab').onclick = function() {
+            const currentServerIndex = servers.indexOf(currentServer);
+            const nextServerIndex = (currentServerIndex + 1) % servers.length;
+            currentServer = servers[nextServerIndex];
+            currentServerDisplay.textContent = nextServerIndex + 1;
+            parseM3U(currentServer);
+        };
+
+        // Error handling for player
+        player.on('error', function(e) {
+            console.error('Player error:', e);
+            const errorMessage = document.createElement('div');
+            errorMessage.className = 'error-message';
+            errorMessage.textContent = 'Video playback error. Please try again.';
+            document.querySelector('.video-container').appendChild(errorMessage);
+            setTimeout(() => errorMessage.remove(), 3000);
+        });
+
+        // Make functions globally available
+        window.playChannel = playChannel;
+        window.toggleFavorite = toggleFavorite;
+        window.showChannelsByCategory = showChannelsByCategory;
+    </script>
+</body>
+                          </html>
