@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:jwplayer="http://rss.jwpcdn.com/">
+<channel>
+  <title>Bongo</title>
+  <description></description>
+  <jwplayer:kind>MANUAL</jwplayer:kind>
+  <jwplayer:feedid>BIkwThDv</jwplayer:feedid>
+  <jwplayer:feed_instance_id>86fec38a-9d43-4ca8-80e6-ea65f1a02daa</jwplayer:feed_instance_id>
+  <jwplayer:link rel="first" href="https://cdn.jwplayer.com/v2/playlists/BIkwThDv?format=mrss&amp;internal=false&amp;page_offset=1&amp;page_limit=500"/>
+  <jwplayer:link rel="last" href="https://cdn.jwplayer.com/v2/playlists/BIkwThDv?format=mrss&amp;internal=false&amp;page_offset=1&amp;page_limit=500"/>
+  <item>
+    <title>Black Money (2025)</title>
+    <link>https://cdn.jwplayer.com/previews/5HSPo1hV</link>
+    <description>Story of the black movie khawa dawa korchi pula pain.</description>
+    <pubDate>Sun, 05 Jan 2025 05:11:53 -0000</pubDate>
+    <guid isPermaLink="false">5HSPo1hV</guid>
+    <enclosure url="https://cdn.jwplayer.com/videos/5HSPo1hV-ReIxix7C.mp4" type="video/mp4" length="7725"/>
+    <jwplayer:feedid>BIkwThDv</jwplayer:feedid>
+      <media:group>
+      <media:content url="https://cdn.jwplayer.com/manifests/5HSPo1hV.m3u8" medium="video" type="application/vnd.apple.mpegurl" duration="7725"/>
+      <media:content url="https://cdn.jwplayer.com/videos/5HSPo1hV-ReIxix7C.mp4" medium="video" type="video/mp4" duration="7725" width="320" height="180" fileSize="303002573"/>
+      <media:content url="https://cdn.jwplayer.com/videos/5HSPo1hV-CcP53hC5.m4a" medium="video" type="audio/mp4" duration="7725" fileSize="109484676"/>
+      <media:thumbnail url="https://cdn.jwplayer.com/v2/media/5HSPo1hV/poster.jpg?width=720" width="720" />
+      <media:keywords></media:keywords>
+    </media:group>
+    <jwplayer:track file="https://cdn.jwplayer.com/strips/5HSPo1hV-120.vtt" kind="thumbnails"/>
+  </item>
+</channel>
+</rss>
