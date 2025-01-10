@@ -4,77 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Player</title>
-    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
     <style>
-        #video-player {
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+        }
+        #videoPlayer {
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+        }
+        #video {
             width: 100%;
             height: auto;
-            position: relative;
         }
         #logo {
             position: absolute;
-            bottom: 10px;
             right: 10px;
-            width: 100px; /* Adjust the logo size */
+            top: 10px;
+            width: 50px; /* Adjust logo size */
         }
-        #link-popup {
+        #linkPopup {
             display: none;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: white;
+            background: #fff;
             padding: 20px;
-            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             z-index: 1000;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
         }
     </style>
 </head>
 <body>
 
-<div id="link-popup">
-    <h2>Enter Video Link</h2>
-    <input type="text" id="video-link" placeholder="Enter MP4/M3U8 Link" />
-    <button onclick="setVideo()">Set Video</button>
-    <button onclick="copyEmbedLink()">Copy Embed Link</button>
-    <p id="embed-link" style="display:none;"></p>
-    <button onclick="closePopup()">Close</button>
+<div id="videoPlayer">
+    <video id="video" controls>
+        <source id="videoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <img id="logo" src="your-logo.png" alt="Logo">
 </div>
 
-<video id="video-player" class="video-js" controls preload="auto" data-setup="{}">
-    <source id="video-source" src="" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-<img id="logo" src="your-logo.png" alt="Logo" />
+<div id="overlay"></div>
+<div id="linkPopup">
+    <h3>Enter Video Link</h3>
+    <input type="text" id="videoLink" placeholder="Enter mp4/m3u8 link" />
+    <button onclick="setVideo()">Set Video</button>
+    <button onclick="copyEmbedLink()">Copy Embed Link</button>
+</div>
 
-<script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
 <script>
-    function openPopup() {
-        document.getElementById('link-popup').style.display = 'block';
-    }
-
-    function closePopup() {
-        document.getElementById('link-popup').style.display = 'none';
-    }
+    // Show the popup on page load
+    window.onload = function() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('linkPopup').style.display = 'block';
+    };
 
     function setVideo() {
-        const videoLink = document.getElementById('video-link').value;
-        document.getElementById('video-source').src = videoLink;
-        const player = videojs('video-player');
-        player.load();
-        const embedLink = `${window.location.origin}/embed?video=${encodeURIComponent(videoLink)}`;
-        document.getElementById('embed-link').innerText = embedLink;
-        document.getElementById('embed-link').style.display = 'block';
+        const link = document.getElementById('videoLink').value;
+        document.getElementById('videoSource').src = link;
+        document.getElementById('video').load();
+        hidePopup();
+    }
+
+    function hidePopup() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('linkPopup').style.display = 'none';
     }
 
     function copyEmbedLink() {
-        const embedLink = document.getElementById('embed-link').innerText;
+        const embedLink = `<iframe src="YOUR_DOMAIN/embed?video=${encodeURIComponent(document.getElementById('videoSource').src)}" frameborder="0" allowfullscreen></iframe>`;
         navigator.clipboard.writeText(embedLink).then(() => {
             alert('Embed link copied to clipboard!');
         });
     }
-
-    window.onload = openPopup; // Show popup on load
 </script>
 
 </body>
