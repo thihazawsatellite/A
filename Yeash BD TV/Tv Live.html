@@ -3,115 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player with Channel List</title>
+    <title>IPTV Player</title>
     <style>
         body {
-            display: flex;
-            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
         }
-        #videoPlayer {
-            width: 70%;
-            background: black;
+        #player {
+            width: 600px;
+            height: 400px;
+            background-color: black;
+            margin-bottom: 10px;
         }
-        #channelList {
-            width: 30%;
-            padding: 10px;
-            overflow-y: auto;
+        #channel-list {
+            display: none;
+            border: 1px solid #ccc;
             background: white;
-            border-left: 1px solid #ccc;
-        }
-        .channel {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            cursor: pointer;
-        }
-        .channel img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
-        .controls {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
+            z-index: 1;
+            max-height: 200px;
+            overflow-y: auto;
         }
-        .button {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 10px;
+        #channel-list div {
+            padding: 8px;
             cursor: pointer;
-            margin: 5px;
+        }
+        #channel-list div:hover {
+            background-color: #f0f0f0;
         }
     </style>
 </head>
 <body>
 
-<div id="videoPlayer">
-    <video id="video" width="100%" controls>
-        <source id="videoSource" src="" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="controls">
-        <button class="button" id="upButton">Up</button>
-        <button class="button" id="downButton">Down</button>
-    </div>
-</div>
-
-<div id="channelList">
-    <h3>Channels</h3>
-    <div id="channels"></div>
+<div id="player">IPTV Player</div>
+<div>
+    <button id="dropdown-btn">Channels</button>
+    <div id="channel-list"></div>
 </div>
 
 <script>
-    const channels = [
-        { name: "Channel 1", src: "video1.mp4", img: "thumbnail1.jpg" },
-        { name: "Channel 2", src: "video2.mp4", img: "thumbnail2.jpg" },
-        { name: "Channel 3", src: "video3.mp4", img: "thumbnail3.jpg" },
-        // Add more channels as needed
-    ];
+    const m3uUrl = 'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/channel.m3u'; // Replace with your M3U playlist URL
 
-    let currentChannelIndex = 0;
+    document.getElementById('dropdown-btn').addEventListener('click', function() {
+        const channelList = document.getElementById('channel-list');
+        channelList.style.display = channelList.style.display === 'block' ? 'none' : 'block';
+        
+        if (channelList.innerHTML === '') {
+            fetch(m3uUrl)
+                .then(response => response.text())
+                .then(data => {
+                    const channels = parseM3U(data);
+                    channels.forEach(channel => {
+                        const div = document.createElement('div');
+                        div.innerHTML = `<img src="${channel.image}" alt="${channel.name}" width="30" height="30"> ${channel.name}`;
+                        div.onclick = () => playChannel(channel.url);
+                        channelList.appendChild(div);
+                    });
+                });
+        }
+    });
 
-    const videoElement = document.getElementById('video');
-    const videoSource = document.getElementById('videoSource');
-    const channelsContainer = document.getElementById('channels');
+    function parseM3U(data) {
+        const lines = data.split('\n');
+        const channels = [];
+        let currentChannel = {};
 
-    function loadChannels() {
-        channels.forEach((channel, index) => {
-            const channelDiv = document.createElement('div');
-            channelDiv.className = 'channel';
-            channelDiv.innerHTML = `<img src="${channel.img}" alt="${channel.name}"><span>${channel.name}</span>`;
-            channelDiv.onclick = () => {
-                currentChannelIndex = index;
-                playChannel();
-            };
-            channelsContainer.appendChild(channelDiv);
+        lines.forEach(line => {
+            if (line.startsWith('#EXTINF:')) {
+                const parts = line.split(',');
+                currentChannel = { name: parts[1].trim(), image: 'YOUR_IMAGE_URL_HERE', url: '' }; // Set image URL or modify to extract from M3U
+            } else if (line && !line.startsWith('#')) {
+                currentChannel.url = line;
+                channels.push(currentChannel);
+            }
         });
+
+        return channels;
     }
 
-    function playChannel() {
-        videoSource.src = channels[currentChannelIndex].src;
-        videoElement.load();
-        videoElement.play();
+    function playChannel(url) {
+        const player = document.getElementById('player');
+        player.innerHTML = `Playing: <a href="${url}" target="_blank">${url}</a>`;
     }
-
-    document.getElementById('upButton').onclick = () => {
-        currentChannelIndex = (currentChannelIndex > 0) ? currentChannelIndex - 1 : channels.length - 1;
-        playChannel();
-    };
-
-    document.getElementById('downButton').onclick = () => {
-        currentChannelIndex = (currentChannelIndex < channels.length - 1) ? currentChannelIndex + 1 : 0;
-        playChannel();
-    };
-
-    loadChannels();
-    playChannel();
 </script>
 
 </body>
+</html>
