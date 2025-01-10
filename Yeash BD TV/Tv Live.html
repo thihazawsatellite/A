@@ -3,88 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPTV Player</title>
+    <title>Cold Water Animation</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-        }
-        #player {
-            width: 600px;
-            height: 400px;
-            background-color: black;
-            margin-bottom: 10px;
-        }
-        #channel-list {
-            display: none;
-            border: 1px solid #ccc;
-            background: white;
-            position: absolute;
-            z-index: 1;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-        #channel-list div {
-            padding: 8px;
-            cursor: pointer;
-        }
-        #channel-list div:hover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-color: #f0f0f0;
+        }
+        .glass {
+            position: relative;
+            width: 100px;
+            height: 200px;
+            border: 5px solid #000;
+            border-radius: 10px;
+            background-color: #add8e6; /* Light blue for water */
+            overflow: hidden;
+        }
+        .mouse {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: gray;
+            border-radius: 50%;
+            animation: shake 0.5s infinite alternate;
+        }
+        @keyframes shake {
+            0% { transform: translate(-50%, 0); }
+            100% { transform: translate(-50%, -5px); }
+        }
+        .water {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 70%;
+            background-color: rgba(173, 216, 230, 0.7); /* Semi-transparent water */
+            animation: fill 3s linear infinite;
+        }
+        @keyframes fill {
+            0% { height: 0%; }
+            50% { height: 70%; }
+            100% { height: 0%; }
         }
     </style>
 </head>
 <body>
-
-<div id="player">IPTV Player</div>
-<div>
-    <button id="dropdown-btn">Channels</button>
-    <div id="channel-list"></div>
-</div>
-
-<script>
-    const m3uUrl = 'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/channel.m3u'; // Replace with your M3U playlist URL
-
-    document.getElementById('dropdown-btn').addEventListener('click', function() {
-        const channelList = document.getElementById('channel-list');
-        channelList.style.display = channelList.style.display === 'block' ? 'none' : 'block';
-        
-        if (channelList.innerHTML === '') {
-            fetch(m3uUrl)
-                .then(response => response.text())
-                .then(data => {
-                    const channels = parseM3U(data);
-                    channels.forEach(channel => {
-                        const div = document.createElement('div');
-                        div.innerHTML = `<img src="${channel.image}" alt="${channel.name}" width="30" height="30"> ${channel.name}`;
-                        div.onclick = () => playChannel(channel.url);
-                        channelList.appendChild(div);
-                    });
-                });
-        }
-    });
-
-    function parseM3U(data) {
-        const lines = data.split('\n');
-        const channels = [];
-        let currentChannel = {};
-
-        lines.forEach(line => {
-            if (line.startsWith('#EXTINF:')) {
-                const parts = line.split(',');
-                currentChannel = { name: parts[1].trim(), image: 'YOUR_IMAGE_URL_HERE', url: '' }; // Set image URL or modify to extract from M3U
-            } else if (line && !line.startsWith('#')) {
-                currentChannel.url = line;
-                channels.push(currentChannel);
-            }
-        });
-
-        return channels;
-    }
-
-    function playChannel(url) {
-        const player = document.getElementById('player');
-        player.innerHTML = `Playing: <a href="${url}" target="_blank">${url}</a>`;
-    }
-</script>
-
+    <div class="glass">
+        <div class="water"></div>
+        <div class="mouse"></div>
+    </div>
 </body>
-</html>
