@@ -58,7 +58,7 @@
         <source id="videoSource" src="" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    <img id="logo" src="your-logo.png" alt="Logo">
+    <img id="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGR7KB9m8ME4KXDOjI6FJJd2mpYCruWJe14Y7mq8D9vP43-XGNvfyeUAI-DU2LljXWNEoWag776JvW-UwlkYkSH0lJ1-mS3t8az8-PRKlesGOzWOCgdRKl8Q-x0tdq3Ugg6pkJoguVtjPY1dTdEntbuT0ohT93LjKZEg7aar1TATdezGw5gj1ALwo9/s640/1736227220134.png" alt="Logo">
 </div>
 
 <div id="overlay"></div>
@@ -89,7 +89,7 @@
     }
 
     function copyEmbedLink() {
-        const embedLink = `<iframe src="YOUR_DOMAIN/embed?video=${encodeURIComponent(document.getElementById('videoSource').src)}" frameborder="0" allowfullscreen></iframe>`;
+        const embedLink = `<iframe src="https:ytv.42web.io/embed?video=${encodeURIComponent(document.getElementById('videoSource').src)}" frameborder="0" allowfullscreen></iframe>`;
         navigator.clipboard.writeText(embedLink).then(() => {
             alert('Embed link copied to clipboard!');
         });
