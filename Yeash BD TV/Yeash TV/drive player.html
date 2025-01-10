@@ -1,1 +1,104 @@
-<!DOCTYPE html><html lang="en"> <head>	<meta charset="UTF-8">	<meta name="viewport" content="width=device-width, initial-scale=1.0">	<title>Drive Video Player</title>	<link rel="shortcut icon" href="https://bit.ly/samplefavicon" type="image/x-icon"><meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/><meta name='google-adsense-platform-domain' content='blogspot.com'/></head><body>	<style>		body { 			padding: 0; 			margin: 0; 		}  		video { 			width: 560%; 			height: 315%; 			position: absolute; 		} .embed {     position: absolute;     background: none;     top: 2px;     z-index: 999;     color: aqua;     font-family: sans-serif;     font-size: 18px;     border: 0;     font-weight: 600;     right: 10px; } 	</style>	<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js">	</script>	<script>		var apikey = "AIzaSyAHIDPKFSVbDwk-NdlAW8n3uh2q6AJkyAA";//Your Drive Api Key         var eid="";         var video="";         var embed="";          if(!getParameterByName('id') || getParameterByName('ib')){           var eid = prompt('Enter Drive Video ID :- ');           embed = ` <iframe width="560" height="315"  scrolling="no" src="${location.href}?id=${eid}"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;  gyroscope; picture-in-picture" allowfullscreen></iframe>          `;           prompt('Here is Your Embed Code :- ',embed);           window.location.href = window.location.href+'?id='+eid;         }          video = getParameterByName('id') ;         if(getParameterByName('ib')){             video = btoa(getParameterByName('ib'));         }         var vidurl = "https://www.googleapis.com/drive/v3/files/"+video+"?alt=media&key="+apikey;         document.write("<video controls id='video' src="+vidurl+"></video>");   function getembed(){             var code = ` <iframe width="560" height="315"  scrolling="no" src="${location.href}?id=${video}"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;  gyroscope; picture-in-picture" allowfullscreen></iframe>          `;           prompt('Here is Your Embed Code :- ',code); }  function getParameterByName(name, url = window.location.href) {     name = name.replace(/[\[\]]/g, '\\$&');     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),         results = regex.exec(url);     if (!results) return null;     if (!results[2]) return '';     return decodeURIComponent(results[2].replace(/\+/g, ' ')); } 	</script>  	<script>		var myFP = fluidPlayer(         'video',	{ 	"layoutControls": { 		"controlBar": { 			"autoHideTimeout": 3, 			"animated": true, 			"autoHide": true 		}, 		"htmlOnPauseBlock": { 			"html": '<button class=\"embed\" onclick=\"getembed()\">Embed</button>\n', 			"height": null, 			"width": null 		}, 		"autoPlay": true, 		"mute": true, 		"allowTheatre": true, 		"playPauseAnimation": true, 		"playbackRateEnabled": true, 		"allowDownload": false, 		"playButtonShowing": true, 		"fillToContainer": false, 		"posterImage": "" 	}, 	"vastOptions": { 		"adList": [], 		"adCTAText": false, 		"adCTATextPosition": "" 	} })  	</script></body> </html>
+Creating a site similar to the Reel Video feature on Facebook involves various aspects such as HTML, CSS, and JavaScript for interactivity. Below is a basic example of how you can set up a simple HTML structure for a video reel-like interface. This script includes a video player, navigation buttons, and a basic layout.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Reel</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #reel-container {
+            position: relative;
+            width: 300px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="reel-container">
+    <video id="videoPlayer" controls>
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="controls">
+        <button class="btn" onclick="prevVideo()">Previous</button>
+        <button class="btn" onclick="nextVideo()">Next</button>
+    </div>
+</div>
+
+<script>
+    const videos = [
+        'video1.mp4',
+        'video2.mp4',
+        'video3.mp4'
+    ];
+    let currentVideoIndex = 0;
+
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    function loadVideo(index) {
+        videoPlayer.src = videos[index];
+        videoPlayer.play();
+    }
+
+    function nextVideo() {
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        loadVideo(currentVideoIndex);
+    }
+
+    function prevVideo() {
+        currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+        loadVideo(currentVideoIndex);
+    }
+
+    // Load the first video on page load
+    loadVideo(currentVideoIndex);
+</script>
+
+</body>
+</html>
+```
+
+### Explanation:
+1. **HTML Structure**: The basic structure includes a video player and navigation buttons.
+2. **CSS Styles**: The styles center the video and add some basic styling for the buttons and container.
+3. **JavaScript Functionality**: The script manages the video playback, allowing users to navigate through an array of video sources.
+
+### Note:
+- Replace `video1.mp4`, `video2.mp4`, and `video3.mp4` with the actual paths to your video files.
+- This is a simple implementation. For a production-level application, consider adding features like user authentication, comments, likes, and a more sophisticated UI design.
