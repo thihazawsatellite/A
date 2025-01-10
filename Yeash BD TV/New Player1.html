@@ -6,81 +6,87 @@
     <title>Video Player</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             background-color: #f0f0f0;
         }
         #videoPlayer {
-            position: relative;
             width: 640px;
             height: 360px;
             background-color: black;
+            position: relative;
         }
-        #videoLogo {
+        #myLogo {
             position: absolute;
-            bottom: 10px;
             right: 10px;
-            width: 100px; /* Adjust as needed */
-        }
-        #linkInput {
-            display: none;
-            position: absolute;
             top: 10px;
-            left: 10px;
-            z-index: 2;
+            width: 50px; /* Change as needed */
+        }
+        #linkInputPopup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
         #embedLink {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 10px;
-            z-index: 2;
+            margin-top: 10px;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-<div id="videoPlayer">
-    <video id="video" width="640" height="360" controls>
-        <source id="videoSource" src="" type="">
-        Your browser does not support the video tag.
-    </video>
-    <img id="videoLogo" src="your-logo.png" alt="Logo">
-    <input type="text" id="linkInput" placeholder="Enter MP4/M3U8 link">
-    <button onclick="embedVideo()">Embed Video</button>
-    <div id="embedLink"></div>
-</div>
+    <div id="videoPlayer">
+        <video id="video" controls>
+            Your browser does not support the video tag.
+        </video>
+        <img id="myLogo" src="your-logo-url.png" alt="Logo">
+    </div>
 
-<script>
-    function embedVideo() {
-        const linkInput = document.getElementById('linkInput');
-        const videoSource = document.getElementById('videoSource');
-        const embedLink = document.getElementById('embedLink');
+    <button onclick="showPopup()">Add Video Link</button>
 
-        const videoLink = linkInput.value;
+    <div id="linkInputPopup">
+        <h3>Insert Video Link</h3>
+        <input type="text" id="videoLink" placeholder="Enter mp4/m3u8 link">
+        <button onclick="generateEmbedLink()">Generate Embed Link</button>
+        <input type="text" id="embedLink" placeholder="Embed Link" readonly>
+        <button onclick="copyEmbedLink()">Copy Embed Link</button>
+        <button onclick="closePopup()">Close</button>
+    </div>
 
-        if (videoLink) {
-            // Set video source
-            videoSource.src = videoLink.includes('.m3u8') ? videoLink : videoLink;
-            videoSource.type = videoLink.includes('.m3u8') ? 'application/x-mpegURL' : 'video/mp4';
-            document.getElementById('video').load();
-
-            // Generate short link (example placeholder)
-            const shortLink = 'https://your-domain.com/embed?video=' + encodeURIComponent(videoLink);
-            embedLink.innerHTML = 'Embed Link: <a href="' + shortLink + '" target="_blank">' + shortLink + '</a>';
-            embedLink.style.display = 'block';
-        } else {
-            alert('Please enter a valid video link.');
+    <script>
+        function showPopup() {
+            document.getElementById('linkInputPopup').style.display = 'block';
         }
-    }
 
-    // Show input field when player loads
-    window.onload = function() {
-        document.getElementById('linkInput').style.display = 'block';
-    };
-</script>
+        function closePopup() {
+            document.getElementById('linkInputPopup').style.display = 'none';
+        }
+
+        function generateEmbedLink() {
+            const videoLink = document.getElementById('videoLink').value;
+            // Here you would typically send the videoLink to your server to generate a short link
+            // For demonstration, we'll just use a placeholder
+            const embedLink = `https://your-embed-domain.com/embed?video=${encodeURIComponent(videoLink)}`;
+            document.getElementById('embedLink').value = embedLink;
+            document.getElementById('video').src = videoLink;  // Set video source
+        }
+
+        function copyEmbedLink() {
+            const embedLinkInput = document.getElementById('embedLink');
+            embedLinkInput.select();
+            document.execCommand("copy");
+            alert("Embed link copied to clipboard!");
+        }
+    </script>
 
 </body>
 </html>
