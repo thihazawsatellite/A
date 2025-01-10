@@ -4,29 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Player</title>
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        #videoPlayer {
-            width: 640px;
-            height: 360px;
-            background-color: black;
+        #video-player {
+            width: 100%;
+            height: auto;
             position: relative;
         }
-        #myLogo {
+        #logo {
             position: absolute;
+            bottom: 10px;
             right: 10px;
-            top: 10px;
-            width: 50px; /* Change as needed */
+            width: 100px; /* Adjust the logo size */
         }
-        #linkInputPopup {
+        #link-popup {
             display: none;
             position: fixed;
             top: 50%;
@@ -34,59 +25,57 @@
             transform: translate(-50%, -50%);
             background: white;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        #embedLink {
-            margin-top: 10px;
-            width: 100%;
+            border: 1px solid #ccc;
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
 
-    <div id="videoPlayer">
-        <video id="video" controls>
-            Your browser does not support the video tag.
-        </video>
-        <img id="myLogo" src="your-logo-url.png" alt="Logo">
-    </div>
+<div id="link-popup">
+    <h2>Enter Video Link</h2>
+    <input type="text" id="video-link" placeholder="Enter MP4/M3U8 Link" />
+    <button onclick="setVideo()">Set Video</button>
+    <button onclick="copyEmbedLink()">Copy Embed Link</button>
+    <p id="embed-link" style="display:none;"></p>
+    <button onclick="closePopup()">Close</button>
+</div>
 
-    <button onclick="showPopup()">Add Video Link</button>
+<video id="video-player" class="video-js" controls preload="auto" data-setup="{}">
+    <source id="video-source" src="" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<img id="logo" src="your-logo.png" alt="Logo" />
 
-    <div id="linkInputPopup">
-        <h3>Insert Video Link</h3>
-        <input type="text" id="videoLink" placeholder="Enter mp4/m3u8 link">
-        <button onclick="generateEmbedLink()">Generate Embed Link</button>
-        <input type="text" id="embedLink" placeholder="Embed Link" readonly>
-        <button onclick="copyEmbedLink()">Copy Embed Link</button>
-        <button onclick="closePopup()">Close</button>
-    </div>
+<script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+<script>
+    function openPopup() {
+        document.getElementById('link-popup').style.display = 'block';
+    }
 
-    <script>
-        function showPopup() {
-            document.getElementById('linkInputPopup').style.display = 'block';
-        }
+    function closePopup() {
+        document.getElementById('link-popup').style.display = 'none';
+    }
 
-        function closePopup() {
-            document.getElementById('linkInputPopup').style.display = 'none';
-        }
+    function setVideo() {
+        const videoLink = document.getElementById('video-link').value;
+        document.getElementById('video-source').src = videoLink;
+        const player = videojs('video-player');
+        player.load();
+        const embedLink = `${window.location.origin}/embed?video=${encodeURIComponent(videoLink)}`;
+        document.getElementById('embed-link').innerText = embedLink;
+        document.getElementById('embed-link').style.display = 'block';
+    }
 
-        function generateEmbedLink() {
-            const videoLink = document.getElementById('videoLink').value;
-            // Here you would typically send the videoLink to your server to generate a short link
-            // For demonstration, we'll just use a placeholder
-            const embedLink = `https://your-embed-domain.com/embed?video=${encodeURIComponent(videoLink)}`;
-            document.getElementById('embedLink').value = embedLink;
-            document.getElementById('video').src = videoLink;  // Set video source
-        }
+    function copyEmbedLink() {
+        const embedLink = document.getElementById('embed-link').innerText;
+        navigator.clipboard.writeText(embedLink).then(() => {
+            alert('Embed link copied to clipboard!');
+        });
+    }
 
-        function copyEmbedLink() {
-            const embedLinkInput = document.getElementById('embedLink');
-            embedLinkInput.select();
-            document.execCommand("copy");
-            alert("Embed link copied to clipboard!");
-        }
-    </script>
+    window.onload = openPopup; // Show popup on load
+</script>
 
 </body>
 </html>
