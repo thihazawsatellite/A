@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Jio Chinema| FREDFLIX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://www.jiocinema.com/favicon.ico" />
+    <link rel="shortcut icon" href="https://www.jiocinema.com/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+<style>
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: black;
+}
+.card {
+    color: #FFFFFF;
+    border-radius: 2rem .3rem;
+    background-color: #202020 !important;
+    text-align: center;
+    justify-content: center;
+    item-align: center;
+    border: 2px solid black;
+}
+.card:hover {
+    background-color: rgba(165, 42, 42, 0.521);
+    border-color: white;
+    border: 2px solid white;
+}
+.card:hover .card-text {
+    color: white;
+}
+.card a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.tvimage {
+    border-radius: 28px;
+}
+.logo-container {
+        display: flex;
+        align-items: center;
+    }
+    .custom-logo {
+        height: 50px;
+        width: 40px;
+        margin-right: 10px; /* Image ar text ar moddhe gap */
+    }
+    .logo-text {
+        font-size: 24px; /* Text er size customize korun */
+        font-weight: bold;
+color: white;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+  <div class="mt-3 mb-4 logo-container">
+    <img src="https://www.jiocinema.com/images/jc_logo.svg" alt="logo" class="custom-logo"/>
+    <span class="logo-text">Jio Cinema</span>
+</div>
+        <div class="mb-4">
+            <div class="input-group">
+                <input class="form-control" type="search" id="search" placeholder="Search Channels Here ..." autocomplete="off" />
+                <button class="btn btn-danger" id="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="tv_catalog">
+            <div class="row">
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel1" title="Watch Channel 1 Live Stream" onclick="openPlayer('v1', 'Channel 1', 'https://i.ibb.co.com/cNSCMrX/20250115-190115.jpg')">
+                    <div align="center" class="card mt-2" title="Watch - Nick HD+">
+                        <div>
+                            <img src="https://i.ibb.co.com/cNSCMrX/20250115-190115.jpg" alt="Nick HD+" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>NICK HD+</small></b></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other channels -->
+<div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel2" title="Watch Channel 2 Live Stream" onclick="openPlayer('sony_max&e', 'Channel 2', 'https://images.toffeelive.com/images/program/208144/logo/240x240/mobile_logo_166888001726636116.png')">
+                    <div align="center" class="card mt-2" title="Watch - News 18 Tamildau">
+                        <div>
+                            <img src="https://i.ibb.co.com/kKHv59X/20250115-185954.jpg" alt="LIVE2 VIP" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>News 18 Tamilnadu</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel3" title="Watch Channel 3 Live Stream" onclick="openPlayer('sony_aath&e', 'Channel 3', 'https://images.toffeelive.com/images/program/208144/logo/240x240/mobile_logo_166888001726636116.png')">
+                    <div align="center" class="card mt-2" title="BAN vs IND VIP">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/208144/logo/240x240/mobile_logo_166888001726636116.png" alt="BAN vs IND VIP" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>BAN vs IND VIP</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel2" title="Watch Channel 2 Live Stream" onclick="openPlayer('43dcec1011e7&e', 'Channel 2', 'https://images.toffeelive.com/images/program/603/logo/240x240/mobile_logo_237244001666780563.png')">
+                    <div align="center" class="card mt-2" title="SONY SPORTS TEN 1 HD">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/603/logo/240x240/mobile_logo_237244001666780563.png" alt="SONY SPORTS TEN 1 HD" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY SPORTS TEN 1 HD</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel3" title="Watch Channel 3 Live Stream" onclick="openPlayer('abc6677968ef&e', 'Channel 3', 'https://images.toffeelive.com/images/program/604/logo/240x240/mobile_logo_093449001666780976.png')">
+                    <div align="center" class="card mt-2" title="SONY SPORTS TEN 2 HD">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/604/logo/240x240/mobile_logo_093449001666780976.png" alt="SONY SPORTS TEN 2 HD" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY SPORTS TEN 2 HD</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel2" title="Watch Channel 2 Live Stream" onclick="openPlayer('edc6a07e4754&e', 'Channel 2', 'https://images.toffeelive.com/images/program/2418/logo/240x240/mobile_logo_992280001666781086.png')">
+                    <div align="center" class="card mt-2" title="SONY SPORTS TEN 3 HD">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/2418/logo/240x240/mobile_logo_992280001666781086.png" alt="SONY SPORTS TEN 3 HD" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY SPORTS TEN 3 HD</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel3" title="Watch Channel 3 Live Stream" onclick="openPlayer('fd6de8bd1666&e', 'Channel 3', 'https://images.toffeelive.com/images/program/606/logo/240x240/mobile_logo_689539001672145843.png')">
+                    <div align="center" class="card mt-2" title="SONY SPORTS TEN 5 HD">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/606/logo/240x240/mobile_logo_689539001672145843.png" alt="SONY SPORTS TEN 5 HD" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY SPORTS TEN 5 HD</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel2" title="Watch Channel 2 Live Stream" onclick="openPlayer('2bec2112b890&e', 'Channel 2', 'https://images.toffeelive.com/images/program/57/logo/240x240/mobile_logo_149299001666780350.png')">
+                    <div align="center" class="card mt-2" title="SONY ENTERTAINMENT TELEVISION">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/57/logo/240x240/mobile_logo_149299001666780350.png" alt="SONY ENTERTAINMENT TELEVISION" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY ENTERTAINMENT TELEVISION</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel3" title="Watch Channel 3 Live Stream" onclick="openPlayer('09ec68b3721f&e', 'Channel 3', 'https://images.toffeelive.com/images/program/602/logo/240x240/mobile_logo_495351001666780441.png')">
+                    <div align="center" class="card mt-2" title="Watch - Channel 3">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/602/logo/240x240/mobile_logo_495351001666780441.png" alt="Channel 3" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY ENTERTAINMENT TELEVISION HD</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel2" title="Watch Channel 2 Live Stream" onclick="openPlayer('09ec68b3721f&e', 'Channel 2', 'https://images.toffeelive.com/images/program/352/logo/240x240/mobile_logo_612341001666782969.png')">
+                    <div align="center" class="card mt-2" title="SONY MAX">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/352/logo/240x240/mobile_logo_612341001666782969.png" alt="SONY MAX" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY MAX</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel3" title="Watch Channel 3 Live Stream" onclick="openPlayer('41559a92a8db&e', 'Channel 3', 'https://images.toffeelive.com/images/program/641/logo/240x240/mobile_logo_440775001666782769.png')">
+                    <div align="center" class="card mt-2" title="Watch - Channel 3">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/641/logo/240x240/mobile_logo_440775001666782769.png" alt="Channel 3" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY MAX HD</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+<div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel2" title="Watch Channel 2 Live Stream" onclick="openPlayer('a40abb7586bc&e', 'Channel 2', 'https://images.toffeelive.com/images/program/367/logo/115x115/mobile_logo_886909001563629905.png')">
+                    <div align="center" class="card mt-2" title="Watch - Channel 2">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/367/logo/115x115/mobile_logo_886909001563629905.png" alt="Channel 2" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>B4U Music VIP</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel3" title="Watch Channel 3 Live Stream" onclick="openPlayer('e96cb72a3787&e', 'Channel 3', 'https://images.toffeelive.com/images/program/343/logo/240x240/mobile_logo_496322001666780228.png')">
+                    <div align="center" class="card mt-2" title="Watch - Channel 3">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/343/logo/240x240/mobile_logo_496322001666780228.png" alt="Channel 3" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>Sony Aat</small></b></div>
+                        </div>
+                    </div>
+                </div>
+ 
+ <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel2" title="Watch Channel 2 Live Stream" onclick="openPlayer('0083604d0756&e', 'Channel 2', 'https://images.toffeelive.com/images/program/2420/logo/240x240/mobile_logo_688156001666785674.png')">
+                    <div align="center" class="card mt-2" title="Watch - Channel 2">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/2420/logo/240x240/mobile_logo_688156001666785674.png" alt="Channel 2" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY SAB HD</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel3" title="Watch Channel 3 Live Stream" onclick="openPlayer('36767e3b0bda&e', 'Channel 3', 'https://images.toffeelive.com/images/program/353/logo/240x240/mobile_logo_044841001666779831.png')">
+                    <div align="center" class="card mt-2" title="Watch - Channel 3">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/353/logo/240x240/mobile_logo_044841001666779831.png" alt="Channel 3" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY MAX 2</small></b></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel2" title="Watch Channel 2 Live Stream" onclick="openPlayer('773e835974e1&e', 'Channel 2', 'https://images.toffeelive.com/images/program/2422/logo/240x240/mobile_logo_037670001666785867.png')">
+                    <div align="center" class="card mt-2" title="SONY WAH">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/2422/logo/240x240/mobile_logo_037670001666785867.png" alt="SONY WAH" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY WAH</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel3" title="Watch Channel 3 Live Stream" onclick="openPlayer('edf7ba617dc5&e', 'Channel 3', 'https://images.toffeelive.com/images/program/612/logo/240x240/mobile_logo_091186001666784752.png')">
+                    <div align="center" class="card mt-2" title="Watch - Channel 3">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/612/logo/240x240/mobile_logo_091186001666784752.png" alt="Channel 3" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY YAY</small></b></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel2" title="Watch Channel 2 Live Stream" onclick="openPlayer('a19eef7de250&e', 'Channel 2', 'https://images.toffeelive.com/images/program/670/logo/240x240/mobile_logo_363688001655891620.png')">
+                    <div align="center" class="card mt-2" title="SONY BBC EARTH HD">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/670/logo/240x240/mobile_logo_363688001655891620.png" alt="SONY BBC EARTH HD" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY BBC EARTH HD</small></b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-lg-3 col-xl-2" data-id="channel3" title="Watch Channel 3 Live Stream" onclick="openPlayer('65f4f4c8b5c9&e', 'Channel 3', 'https://images.toffeelive.com/images/program/2419/logo/240x240/mobile_logo_287412001666784602.png')">
+                    <div align="center" class="card mt-2" title="SONY PIX HD">
+                        <div>
+                            <img src="https://images.toffeelive.com/images/program/2419/logo/240x240/mobile_logo_287412001666784602.png" alt="SONY PIX HD" width="140" height="110" class="tvimage" />
+                        </div>
+                        <div class="card-body">
+                            <div style="user-select: none;"><b><small>SONY PIX HD</small></b></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function() {
+    $("#search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $(".card").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+    });
+});
+
+// Open player with the selected channel in a new tab
+function openPlayer(channelId, channelName, channelLogo) {
+    var playerUrl = `player.html?channel_id=${channelId}`; // Adjust the player page URL as necessary
+    window.open(playerUrl, '_blank'); // Open in a new tab
+}
+    </script>
+</body>
+  </html>
