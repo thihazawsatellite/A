@@ -126,7 +126,7 @@
           <span><img alt="MS-Player" height="20" src="https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Player%20Icon/Player.png" width="20" /> MsM</span> </div>
       </li>
       <li>
-        <div class="DagPlayOpt" data-embed="" data-id="Server-1">
+        <div class="DagPlayOpt" data-embed="https://snowant327arh.com/play/" data-id="Server-1">
           <span><img alt="MS-Player" height="20" src="https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Player%20Icon/Player.png" width="20" /> Multi-Player</span> </div>
       </li>
     </ul>
