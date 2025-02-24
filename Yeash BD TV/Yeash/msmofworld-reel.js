@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     async function loadReels() {
-        const m3uUrl = "https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u";
+        const m3uUrl = "https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u"; // আপনার GitHub লিংক দিন
 
         try {
             const response = await fetch(m3uUrl);
@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             const container = document.getElementById("reelsContainer");
-            container.innerHTML = ""; // Clear previous content
+            container.innerHTML = ""; // আগের কন্টেন্ট মুছে ফেলা
 
-            reels = reels.sort(() => Math.random() - 0.5); // Shuffle
+            reels = reels.sort(() => Math.random() - 0.5); // এলোমেলোভাবে সাজানো
 
             reels.forEach((reel, index) => {
                 let reelElement = document.createElement("div");
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 container.appendChild(reelElement);
             });
         } catch (error) {
-            console.error(error);
+            console.error("Error loading videos:", error);
         }
     }
 
