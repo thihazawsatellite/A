@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     async function loadReels() {
-        const m3uUrl = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/yourfile.m3u";
+        const m3uUrl = "https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u";
 
         try {
             const response = await fetch(m3uUrl);
