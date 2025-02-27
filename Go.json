@@ -137,21 +137,29 @@
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     async function loadReels() {
-        const response = await fetch('https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u');
-        if (!response.ok) return console.error('Failed to load videos');
+        const m3uLinks = [
+            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u', // প্রথম লিংক
+            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash2.m3u'  // নতুন লিংক যোগ করুন
+        ];
 
-        const text = await response.text();
-        const lines = text.split("\n");
         let reels = [];
-        let title = "";
 
-        lines.forEach(line => {
-            if (line.startsWith("#EXTINF")) {
-                title = line.substring(line.indexOf(",") + 1).trim();
-            } else if (line.startsWith("http")) {
-                reels.push({ title, url: line.trim(), isLive: line.includes(".m3u8") });
-            }
-        });
+        for (let link of m3uLinks) {
+            const response = await fetch(link);
+            if (!response.ok) return console.error(`Failed to load video from ${link}`);
+
+            const text = await response.text();
+            const lines = text.split("\n");
+            let title = "";
+
+            lines.forEach(line => {
+                if (line.startsWith("#EXTINF")) {
+                    title = line.substring(line.indexOf(",") + 1).trim();
+                } else if (line.startsWith("http")) {
+                    reels.push({ title, url: line.trim(), isLive: line.includes(".m3u8") });
+                }
+            });
+        }
 
         const container = document.getElementById("reelsContainer");
         reels = reels.sort(() => Math.random() - 0.5);
