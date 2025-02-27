@@ -1,0 +1,246 @@
+<b:if cond='data:blog.pageType == "item"'> 
+<style>
+    body {
+        background: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .reels-container {
+        height: 100vh;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: y mandatory;
+        position: relative;
+    }
+    .reel {
+        height: 100vh;
+        scroll-snap-align: start;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* লাইভ ভিডিওর জন্য আলাদা স্টাইল */
+    video[data-live="true"] {
+        height: auto;
+    }
+
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid #00bfff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease-in-out;
+        opacity: 0;
+    }
+
+    .loading-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        border: 5px solid rgba(0, 191, 255, 0.3);
+        border-top: 5px solid #00bfff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        display: none;
+    }
+
+    .live-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: red;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 15px;
+        display: none;
+    }
+
+    .go-live-button {
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #00bfff;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 25px;
+        font-size: 18px;
+        cursor: pointer;
+        display: none;
+        box-shadow: 0px 0px 8px rgba(0, 191, 255, 0.5);
+    }
+
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .profile-icon {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #00bfff, #007acc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0px 0px 8px rgba(0, 191, 255, 0.5);
+    }
+
+    .video-title {
+        position: absolute;
+        bottom: 20px;
+        left: 15px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        backdrop-filter: blur(5px);
+        transition: 0.3s ease-in-out;
+    }
+</style>
+
+<div class="reels-container" id="reelsContainer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    async function loadReels() {
+        const response = await fetch('https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u');
+        if (!response.ok) return console.error('Failed to load videos');
+
+        const text = await response.text();
+        const lines = text.split("\n");
+        let reels = [];
+        let title = "";
+
+        lines.forEach(line => {
+            if (line.startsWith("#EXTINF")) {
+                title = line.substring(line.indexOf(",") + 1).trim();
+            } else if (line.startsWith("http")) {
+                reels.push({ title, url: line.trim(), isLive: line.includes(".m3u8") });
+            }
+        });
+
+        const container = document.getElementById("reelsContainer");
+        reels = reels.sort(() => Math.random() - 0.5);
+
+        reels.forEach((reel, index) => {
+            let reelElement = document.createElement("div");
+            reelElement.className = "reel";
+            reelElement.innerHTML = `
+                <div class="profile-icon">Y</div>
+                <video id="video-${index}" data-index="${index}" loop autoplay muted></video>
+                <p class="video-title">${reel.title}</p>
+                <div class="loading-icon" id="loadingIcon-${index}"></div>
+                <div class="live-badge" id="liveBadge-${index}">LIVE</div>
+                <div class="go-live-button" id="goLiveButton-${index}">Go Live TV</div>
+                <div class="play-button" id="playButton-${index}">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <polygon points="8,5 19,12 8,19" />
+                    </svg>
+                </div>
+            `;
+            container.appendChild(reelElement);
+
+            let video = document.getElementById(`video-${index}`);
+            let loadingIcon = document.getElementById(`loadingIcon-${index}`);
+            let playButton = document.getElementById(`playButton-${index}`);
+            let liveBadge = document.getElementById(`liveBadge-${index}`);
+            let goLiveButton = document.getElementById(`goLiveButton-${index}`);
+
+            if (reel.isLive) {
+                if (Hls.isSupported()) {
+                    let hls = new Hls();
+                    hls.loadSource(reel.url);
+                    hls.attachMedia(video);
+                } else {
+                    video.src = reel.url;
+                }
+                video.setAttribute("data-live", "true");
+                goLiveButton.style.display = "block"; // লাইভ ভিডিওতে "Go Live TV" বাটন দেখানো
+                goLiveButton.addEventListener("click", () => {
+                    window.location.href = "https://msmofworld.top";
+                });
+            } else {
+                video.src = reel.url;
+            }
+
+            playButton.addEventListener("click", () => {
+                if (video.paused) {
+                    video.play();
+                    playButton.style.opacity = "0"; 
+                } else {
+                    video.pause();
+                    playButton.style.opacity = "1"; 
+                }
+            });
+
+            video.addEventListener("waiting", () => {
+                loadingIcon.style.display = "block"; 
+            });
+
+            video.addEventListener("canplay", () => {
+                loadingIcon.style.display = "none"; 
+            });
+
+            video.addEventListener("playing", () => {
+                loadingIcon.style.display = "none"; 
+                if (reel.isLive) {
+                    liveBadge.style.display = "block";
+                }
+            });
+
+            const options = { threshold: 0.5 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.play();
+                        entry.target.muted = false;
+                        if (entry.target.getAttribute("data-live") === "true") {
+                            document.getElementById(`liveBadge-${entry.target.dataset.index}`).style.display = "block";
+                        }
+                    } else {
+                        entry.target.pause();
+                        document.getElementById(`liveBadge-${entry.target.dataset.index}`).style.display = "none";
+                    }
+                });
+            }, options);
+            observer.observe(video);
+        });
+    }
+    loadReels();
+});
+</script>
+</b:if>
