@@ -114,6 +114,7 @@
         font-weight: bold;
         cursor: pointer;
         box-shadow: 0px 0px 8px rgba(0, 191, 255, 0.5);
+        background-size: cover;
     }
 
     .video-title {
@@ -138,15 +139,21 @@
 document.addEventListener("DOMContentLoaded", function() {
     async function loadReels() {
         const m3uLinks = [
-            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u', // প্রথম লিংক
-            'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash2.m3u'  // নতুন লিংক যোগ করুন
+            {
+                url: 'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash.m3u',
+                profileImage: 'https://example.com/image1.jpg' // প্রথম লিংকের জন্য ইমেজ
+            },
+            {
+                url: 'https://raw.githubusercontent.com/msplayerapp/-Mitu/refs/heads/main/Yeash%20BD%20TV/Yeash/Yeash2.m3u',
+                profileImage: 'https://example.com/image2.jpg' // দ্বিতীয় লিংকের জন্য ইমেজ
+            }
         ];
 
         let reels = [];
 
         for (let link of m3uLinks) {
-            const response = await fetch(link);
-            if (!response.ok) return console.error(`Failed to load video from ${link}`);
+            const response = await fetch(link.url);
+            if (!response.ok) return console.error(`Failed to load video from ${link.url}`);
 
             const text = await response.text();
             const lines = text.split("\n");
@@ -156,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (line.startsWith("#EXTINF")) {
                     title = line.substring(line.indexOf(",") + 1).trim();
                 } else if (line.startsWith("http")) {
-                    reels.push({ title, url: line.trim(), isLive: line.includes(".m3u8") });
+                    reels.push({ title, url: line.trim(), isLive: line.includes(".m3u8"), profileImage: link.profileImage });
                 }
             });
         }
@@ -168,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let reelElement = document.createElement("div");
             reelElement.className = "reel";
             reelElement.innerHTML = `
-                <div class="profile-icon">Y</div>
+                <div class="profile-icon" style="background-image: url(${reel.profileImage});"></div>
                 <video id="video-${index}" data-index="${index}" loop autoplay muted></video>
                 <p class="video-title">${reel.title}</p>
                 <div class="loading-icon" id="loadingIcon-${index}"></div>
