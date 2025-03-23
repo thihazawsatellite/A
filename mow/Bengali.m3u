@@ -15,6 +15,8 @@ https://test-proxy-free.tiiny.io/player.php?url=http://45.148.145.57/IN_JALSHAMO
 https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/ZEE.BANGLA.HD.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/msplayerapp/-Mitu/main/mow/Logos/1000012745.png", Star Jalsha
 https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/STAR.JALSHA.HD.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/msplayerapp/-Mitu/main/mow/Logos/1000012765.png", Enter 10 Bangla
+https://test-proxy-free.tiiny.io/player.php?url=https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/msplayerapp/-Mitu/main/mow/Logos/1000012035.png", Duronto TV
 https://its-ferdos-alom.top/fredflix.fun/ayna/play.php?id=9ab9aa29-3d3b-4527-ab47-d9b69f0ea80c
@@ -32,5 +34,3 @@ https://its-ferdos-alom.top/fredflix.fun/ayna/play.php?id=c0480a4a-f066-4a20-9f7
 https://its-ferdos-alom.top/fredflix.fun/ayna/play.php?id=f7c89459-37bf-4129-904d-33b0a4c0d590
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/msplayerapp/-Mitu/main/mow/Logos/1000012739.png", Nexus TV
 https://its-ferdos-alom.top/fredflix.fun/ayna/play.php?id=e64e1c11-1167-43a1-9e0f-995cbf6f7ff9
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/msplayerapp/-Mitu/main/mow/Logos/1000012765.png", Enter 10 Bangla
-https://test-proxy-free.tiiny.io/player.php?url=https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_720p/chunks.m3u8
