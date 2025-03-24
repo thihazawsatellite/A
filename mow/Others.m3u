@@ -17,3 +17,5 @@ https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/AND
 https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/AND.PRIVE.HD.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/msplayerapp/-Mitu/main/mow/Logos/1000012780.png", Zee Cafe HD
 https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/ZEE.CAFE.HD.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/msplayerapp/-Mitu/main/mow/Logos/1000012782.png", Star Movies HD
+https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/STAR.MOVIES.HD.m3u8
