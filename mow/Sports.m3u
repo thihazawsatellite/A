@@ -33,3 +33,5 @@ https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/STA
 https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/STAR.SPORTS-SEL1.HD.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/msplayerapp/-Mitu/main/mow/Logos/1000012823.png", Star Sports Select 2 HD
 https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/STAR.SPORTS.SEL.2.HD.m3u8
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/msplayerapp/-Mitu/main/mow/Logos/1000012825.png", Bein Sports 1
+https://test-proxy-free.tiiny.io/player.php?url=http://103.122.74.6:8888/hls/BEINSPORTS.1.m3u8
