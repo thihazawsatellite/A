@@ -1,22 +1,22 @@
 #EXTM3U
 #EXTINF:-1 tvg-id="sports_highlights" tvg-name="TOFFEE Sports VIP" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/19779/logo/240x240/mobile_logo_975410001725875598.png" tvg-chno="sports_highlights" group-title="", TOFFEE Sports VIP
-https://host.mafiatv.live/toffee/watch.php?id=sports_highlights&e=.m3u8
+https://re.fredflix.fun/Toffee/play.php?id=sports_highlights
 #EXTINF:-1 tvg-id="toffee_movie" tvg-name="TOFFEE Movies VIP" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/2708/logo/240x240/mobile_logo_724353001725875591.png" tvg-chno="toffee_movie" group-title="", TOFFEE Movies VIP
-https://host.mafiatv.live/toffee/watch.php?id=toffee_movie&e=.m3u8
+https://re.fredflix.fun/Toffee/play.php?id=toffee_movie
 #EXTINF:-1 tvg-id="toffee_drama" tvg-name="TOFFEE Dramas VIP" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/44878/logo/240x240/mobile_logo_764950001725875605.png" tvg-chno="toffee_drama" group-title="", TOFFEE Dramas VIP
-https://host.mafiatv.live/toffee/watch.php?id=toffee_drama&e=.m3u8
+https://re.fredflix.fun/Toffee/play.php?id=toffee_drama
 #EXTINF:-1 tvg-id="cnn" tvg-name="CNN VIP" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/333/logo/240x240/mobile_logo_146607001735536058.png" tvg-chno="cnn" group-title="", CNN VIP
-https://host.mafiatv.live/toffee/watch.php?id=cnn&e=.m3u8
+https://re.fredflix.fun/Toffee/play.php?id=cnn
 #EXTINF:-1 tvg-id="euro_sports_hd" tvg-name="Euro Sport HD" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/4388/logo/240x240/mobile_logo_422191001674119624.png" tvg-chno="euro_sports_hd" group-title="", Euro Sport HD
-https://host.mafiatv.live/toffee/watch.php?id=euro_sports_hd&e=.m3u8
+https://re.fredflix.fun/Toffee/play.php?id=euro_sports_hd
 #EXTINF:-1 tvg-id="f4189bfa64f3f801495ad7a973334724" tvg-name="IPL VIP" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/304419/logo/115x115/mobile_logo_253140001742624618.png" tvg-chno="f4189bfa64f3f801495ad7a973334724" group-title="", IPL VIP
-https://host.mafiatv.live/toffee/watch.php?id=f4189bfa64f3f801495ad7a973334724&e=.m3u8
+https://re.fredflix.fun/Toffee/play.php?id=match-1
 #EXTINF:-1 tvg-id="sony_sports_1_hd" tvg-name="SONY SPORTS TEN 1 HD" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/603/logo/240x240/mobile_logo_237244001666780563.png" tvg-chno="sony_sports_1_hd" group-title="", SONY SPORTS TEN 1 HD
-https://host.mafiatv.live/toffee/watch.php?id=sony_sports_1_hd&e=.m3u8
+https://re.fredflix.fun/Toffee/play.php?id=sony_sports_1_hd
 #EXTINF:-1 tvg-id="sony_sports_2_hd" tvg-name="SONY SPORTS TEN 2 HD" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/604/logo/240x240/mobile_logo_093449001666780976.png" tvg-chno="sony_sports_2_hd" group-title="", SONY SPORTS TEN 2 HD
-https://host.mafiatv.live/toffee/watch.php?id=sony_sports_2_hd&e=.m3u8
+https://re.fredflix.fun/Toffee/play.php?id=sony_sports_2_hd
 #EXTINF:-1 tvg-id="sony_sports_5_hd" tvg-name="SONY SPORTS TEN 5 HD" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/606/logo/240x240/mobile_logo_689539001672145843.png" tvg-chno="sony_sports_5_hd" group-title="", SONY SPORTS TEN 5 HD
-https://host.mafiatv.live/toffee/watch.php?id=sony_sports_5_hd&e=.m3u8
+https://re.fredflix.fun/Toffee/play.php?id=sony_sports_5_hd
 #EXTINF:-1 tvg-id="ten_cricket" tvg-name="SONY TEN Cricket" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/301891/logo/240x240/mobile_logo_578686001735197654.png" tvg-chno="ten_cricket" group-title="", SONY TEN Cricket
 https://host.mafiatv.live/toffee/watch.php?id=ten_cricket&e=.m3u8
 #EXTINF:-1 tvg-id="cartoon_network_hd" tvg-name="Cartoon Network HD" tvg-country="IN" tvg-logo="https://images.toffeelive.com/images/program/26942/logo/240x240/mobile_logo_443429001678950505.png" tvg-chno="cartoon_network_hd" group-title="", Cartoon Network HD
