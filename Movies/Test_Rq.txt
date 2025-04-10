@@ -1,5 +1,0 @@
-User: Test Rq
-Movie: Testing rq
-Status: Pending
-Image: https://raw.githubusercontent.com/msplayerapp/-Mitu/main/Movies/images/1744259694076_1000013175.png
-Date: 2025-04-10
