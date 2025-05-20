@@ -1,0 +1,254 @@
+<!-- Font Awesome Icon CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<div id="smartTvContainer" style="display:flex; background:#000; color:#fff; height:600px; overflow:hidden; font-family:sans-serif; position:relative;">
+  <!-- Sidebar -->
+  <div id="smartSidebar" style="width:250px; background:#111; padding:0; overflow:hidden; display:flex; flex-direction:column; transition:all 0.5s;">
+    <div style="position:sticky; top:0; background:#111; z-index:10; padding:10px;">
+      <h3 style="text-align:center; color:#0f0; margin:0;">Channel List</h3>
+      <input type="text" id="channelSearch" placeholder="Search by name or number..." style="width:100%; padding:6px; margin-top:10px; border:none; border-radius:4px; background:#222; color:#fff;">
+    </div>
+    <ul id="smartChannelList" style="list-style:none; padding:10px; margin:0; overflow-y:auto; flex:1;"></ul>
+  </div>
+
+  <!-- Player -->
+  <div id="smartPlayer" style="flex:1; padding:10px; transition:all 0.5s; position:relative;">
+    <iframe id="smartTvFrame" src="" style="width:100%; height:100%; border:none; border-radius:10px;" allowfullscreen></iframe>
+
+    <!-- Logo at bottom-right -->
+    <div id="playerLogo" style="position:absolute; bottom:15px; right:15px; z-index:999;">
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgbuJ1rxtHvaynErboODUyLM-aHw822buNfEteS1_iMlcGJfDzD9iSD-9578GpRN8VPxiYu86NQO34X51k-98fRHKP7l3DCekpH_5rDpfxSU0WxL4Efs7Zqp5zn4Enc-i3sF-ASji8y0sl_1MiNw_Q2SPAFHInAIzzOpBrzxjGRTO8uEKI-Fnxxmx1otao=s1200" alt="Logo" style="width:60px; opacity:0.8;">
+    </div>
+
+    <!-- Floating Up/Down -->
+    <div id="floatControls" style="position:absolute; top:50%; right:15px; transform:translateY(-50%); z-index:998; display:flex; flex-direction:column; gap:10px;">
+      <button id="floatUpBtn" style="background:#444; color:#fff; border:none; border-radius:50%; width:40px; height:40px; font-size:18px; cursor:pointer;">▲</button>
+      <button id="floatDownBtn" style="background:#444; color:#fff; border:none; border-radius:50%; width:40px; height:40px; font-size:18px; cursor:pointer;">▼</button>
+    </div>
+
+    <!-- Menu Icon -->
+    <div id="menuButton" style="position:absolute; top:15px; left:15px; background:rgba(0,0,0,0.6); padding:10px; border-radius:50%; display:none; cursor:pointer; z-index:999;">
+      <i class="fas fa-bars" style="color:#fff; font-size:20px;"></i>
+    </div>
+  </div>
+</div>
+
+<style>
+  #smartChannelList li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #222;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  #smartChannelList li:hover {
+    background: #333;
+  }
+  #smartChannelList li.active {
+    background: #0f0;
+    color: #000;
+    font-weight: bold;
+  }
+  #smartChannelList li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+  const m3uUrl = 'https://m3u.ch/pl/ff227b261afdc9eec6d086d8b3144af2_2a7079a60217c6349d4fe182ebbdd288.m3u'; // M3U ফাইল লিংক দিন এখানে
+  const listContainer = document.getElementById('smartChannelList');
+  const player = document.getElementById('smartTvFrame');
+  const sidebar = document.getElementById('smartSidebar');
+  const container = document.getElementById('smartTvContainer');
+  const menuButton = document.getElementById('menuButton');
+  const floatControls = document.getElementById('floatControls');
+  const floatUpBtn = document.getElementById('floatUpBtn');
+  const floatDownBtn = document.getElementById('floatDownBtn');
+  const searchInput = document.getElementById('channelSearch');
+  let listItems = [];
+  let allChannels = [];
+  let currentIndex = 0;
+  let hideTimer;
+
+  // Number input buffer
+  let numberInput = '';
+  let numberTimer;
+
+  // Mute logic
+  let isMuted = false;
+  const originalVolume = 1;
+  const iframe = document.getElementById("smartTvFrame");
+
+  function toggleMute() {
+    if (!iframe.contentWindow) return;
+    isMuted = !isMuted;
+    iframe.contentWindow.postMessage({
+      event: "command",
+      func: "setVolume",
+      args: [isMuted ? 0 : originalVolume]
+    }, "*");
+  }
+
+  // Play/Pause Toggle
+  function togglePlayPause() {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({
+      event: "command",
+      func: "playPause"
+    }, "*");
+  }
+
+  document.addEventListener('keydown', (e) => {
+    // Number input
+    if (e.key >= '0' && e.key <= '9') {
+      numberInput += e.key;
+      clearTimeout(numberTimer);
+      numberTimer = setTimeout(() => {
+        const index = parseInt(numberInput, 10) - 1;
+        if (index >= 0 && index < allChannels.length) {
+          selectChannel(index);
+        }
+        numberInput = '';
+      }, 1500);
+    }
+
+    if (e.key.toLowerCase() === 'm' || e.code === 'AudioVolumeMute') {
+      toggleMute();
+    }
+
+    // Play/Pause - Spacebar or MediaPlayPause
+    if (e.code === 'Space' || e.code === 'MediaPlayPause') {
+      e.preventDefault();
+      togglePlayPause();
+    }
+  });
+
+  async function loadM3U() {
+    try {
+      const res = await fetch(m3uUrl);
+      const text = await res.text();
+      const lines = text.split('\n');
+      listContainer.innerHTML = '';
+      listItems = [];
+      allChannels = [];
+
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith('#EXTINF')) {
+          const extinfLine = lines[i];
+          const title = extinfLine.split(',')[1]?.trim() || 'Unknown';
+          const logoMatch = extinfLine.match(/tvg-logo="(.*?)"/);
+          const logoUrl = logoMatch ? logoMatch[1] : '';
+          const url = lines[i + 1]?.trim();
+          if (url) {
+            const channel = { title, logoUrl, url };
+            allChannels.push(channel);
+          }
+        }
+      }
+
+      renderChannels(allChannels);
+      if (listItems.length > 0) selectChannel(0);
+    } catch (e) {
+      listContainer.innerHTML = '<li style="color:red;">Failed to load channels.</li>';
+    }
+  }
+
+  function renderChannels(channelList) {
+    listContainer.innerHTML = '';
+    listItems = [];
+    channelList.forEach((ch, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>${index + 1}.</strong> ${ch.logoUrl ? `<img src="${ch.logoUrl}" alt="Logo">` : ''}<span>${ch.title}</span>`;
+      li.setAttribute('data-url', ch.url);
+      li.onclick = () => selectChannel(index);
+      listContainer.appendChild(li);
+      listItems.push(li);
+    });
+  }
+
+  function selectChannel(index) {
+    if (index >= 0 && index < listItems.length) {
+      listItems.forEach(li => li.classList.remove('active'));
+      listItems[index].classList.add('active');
+      player.src = listItems[index].getAttribute('data-url');
+      currentIndex = index;
+      resetTimer();
+    }
+  }
+
+  function resetTimer() {
+    clearTimeout(hideTimer);
+    showSidebar();
+    showFloatControls();
+    hideTimer = setTimeout(() => {
+      hideSidebar();
+      hideFloatControls();
+    }, 10000);
+  }
+
+  function hideSidebar() {
+    sidebar.style.display = 'none';
+    container.style.flexDirection = 'column';
+    player.style.width = '100%';
+    player.style.height = '100%';
+    menuButton.style.display = 'block';
+  }
+
+  function showSidebar() {
+    sidebar.style.display = 'flex';
+    container.style.flexDirection = 'row';
+    player.style.width = '100%';
+    player.style.height = '100%';
+    menuButton.style.display = 'none';
+  }
+
+  function hideFloatControls() {
+    floatControls.style.display = 'none';
+  }
+
+  function showFloatControls() {
+    floatControls.style.display = 'flex';
+  }
+
+  // Search
+  searchInput.addEventListener('input', function() {
+    const value = this.value.toLowerCase();
+    if (/^\d+$/.test(value)) {
+      const index = parseInt(value, 10) - 1;
+      if (index >= 0 && index < allChannels.length) {
+        selectChannel(index);
+      }
+    } else {
+      const filtered = allChannels.filter(ch => ch.title.toLowerCase().includes(value));
+      renderChannels(filtered);
+    }
+  });
+
+  // Up/Down
+  floatUpBtn.onclick = () => { selectChannel(currentIndex - 1); };
+  floatDownBtn.onclick = () => { selectChannel(currentIndex + 1); };
+
+  // Interaction reset
+  document.body.addEventListener('click', resetTimer);
+  document.body.addEventListener('touchstart', resetTimer);
+
+  // Menu
+  menuButton.addEventListener('click', () => {
+    showSidebar();
+    resetTimer();
+  });
+
+  loadM3U();
+  resetTimer();
+})();
+//]]>
+</script>
